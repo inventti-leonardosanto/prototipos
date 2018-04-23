@@ -1,13 +1,14 @@
 .filter {
     margin: auto;
     text-align: center;
+    position: relative;
 
     i {
         margin: 0 .5rem;
         vertical-align: middle;
         font-size: 2rem;
         &:hover {
-            background-color: color('grey', 'lighten-3');
+            background-color: color('grey', 'lighten-2');
             cursor: pointer;
         }
     }
@@ -18,7 +19,7 @@
         text-transform: initial;
         &:hover,
         &:focus {
-            background-color: color('grey', 'lighten-3');
+            background-color: color('grey', 'lighten-2');
         }
     }
 }
