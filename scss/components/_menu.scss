@@ -1,0 +1,15 @@
+.menu {
+  li > a {
+    display: block;
+    line-height: 24px;
+    padding: 5px;
+    border-radius: 2px;
+    &:hover {
+      background-color: color("blue", "lighten-5");
+    }
+    i {
+      float: left;
+      line-height: 24px;
+    }
+  }
+}
