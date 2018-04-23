@@ -10,7 +10,7 @@ block content
 			a.btn-flat.grey-text.text-darken-2 Abril de 2018
 			i.material-icons.grey-text.circle keyboard_arrow_right
 
-		h6(style='margin-top:0;').group-title 23 de abril
+		span(style='margin-top:0;').group-title 23 de abril
 		.card.card-grid
 			.card-content
 				table.highlight
@@ -22,6 +22,7 @@ block content
 									span
 							td(width='40')
 								.status.atencao.circle
+									i.material-icons priority_high
 							td
 								i.grey-text.text-lighten-1 Tomador não preenchido
 							td(width='100')
@@ -30,19 +31,13 @@ block content
 								| Normal
 							td(width='100').center
 								| 
-							td(width='120').right-align
+							td(width='100').right-align
 								a
 									i.material-icons.grey-text.text-darken-2 edit
-								a
+								a.hide
 									i.material-icons.grey-text.text-darken-2 find_in_page
 								a
 									i.material-icons.grey-text.text-darken-2 more_vert
-
-		h6.group-title 20 de abril
-		.card.card-grid
-			.card-content
-				table.highlight
-					tbody
 						tr
 							td(width='60')
 								label
@@ -50,25 +45,25 @@ block content
 									span
 							td(width='40')
 								.status.atencao.circle
+									i.material-icons priority_high
 							td
-								| Dalquim Ind. e Com. Ltda
+								| SHB Ind. e Com. Alimentos S.A.
 							td(width='100')
 								.chip
 									| SC
 									i.material-icons arrow_forward
-									| RS
+									| SP
 							td(width='120').center
 								| Normal
 							td(width='100').center
 								| 
-							td(width='120').right-align
+							td(width='100').right-align
 								a
 									i.material-icons.grey-text.text-darken-2 edit
-								a
+								a.hide
 									i.material-icons.grey-text.text-darken-2 find_in_page
 								a
 									i.material-icons.grey-text.text-darken-2 more_vert
-
 						tr
 							td
 								label
@@ -76,6 +71,7 @@ block content
 									span
 							td
 								.status.sucesso.circle
+									i.material-icons done
 							td
 								| JBS S.A.
 							td
@@ -86,18 +82,79 @@ block content
 							td.center
 								| Normal
 							td.center
-								| 1 / 550
+								| 3 / 551
 							td.right-align
 								a
 									i.file PDF
 								a
 									i.file XML
-								a
+								a.hide
 									i.material-icons.grey-text.text-darken-2 find_in_page
 								a
 									i.material-icons.grey-text.text-darken-2 more_vert
 
-		h6.group-title 19 de abril
+		span.group-title 20 de abril
+		.card.card-grid
+			.card-content
+				table.highlight
+					tbody
+						tr
+							td(width='60')
+								label
+									input.filled-in(type='checkbox')
+									span
+							td(width='40')
+								.status.atencao.circle
+									i.material-icons priority_high
+							td
+								| Dalquim Ind. e Com. Ltda
+							td(width='100')
+								.chip
+									| SC
+									i.material-icons arrow_forward
+									| RS
+							td(width='120').center
+								| Subcontratação
+							td(width='100').center
+								| 
+							td(width='100').right-align
+								a
+									i.material-icons.grey-text.text-darken-2 edit
+								a.hide
+									i.material-icons.grey-text.text-darken-2 find_in_page
+								a
+									i.material-icons.grey-text.text-darken-2 more_vert
+
+						tr
+							td
+								label
+									input.filled-in(type='checkbox')
+									span
+							td
+								.status.sucesso.circle
+									i.material-icons done
+							td
+								| JBS S.A.
+							td
+								.chip
+									| SC
+									i.material-icons arrow_forward
+									| SP
+							td.center
+								| Normal
+							td.center
+								| 3 / 550
+							td.right-align
+								a
+									i.file PDF
+								a
+									i.file XML
+								a.hide
+									i.material-icons.grey-text.text-darken-2 find_in_page
+								a
+									i.material-icons.grey-text.text-darken-2 more_vert
+
+		span.group-title 19 de abril
 		.card.card-grid
 			.card-content
 				table.highlight
@@ -109,6 +166,7 @@ block content
 									span
 							td(width='40')
 								.status.sucesso.circle
+									i.material-icons done
 							td
 								| Dalquim Ind. e Com. Ltda
 							td(width='100')
@@ -119,13 +177,13 @@ block content
 							td(width='120').center
 								| Subcontratação
 							td(width='100').center
-								| 1 / 549
-							td(width='120').right-align
+								| 4 / 300
+							td(width='100').right-align
 								a
 									i.file PDF
 								a
 									i.file XML
-								a
+								a.hide
 									i.material-icons.grey-text.text-darken-2 find_in_page
 								a
 									i.material-icons.grey-text.text-darken-2 more_vert
@@ -134,3 +192,11 @@ block content
 	.fixed-action-btn
 		a.btn-floating.btn-large.waves-effect.waves-light
 			i.material-icons add
+		ul
+			li
+				a.btn-floating.orange
+					i.material-icons search
+			li
+				a.btn-floating.orange
+					i.material-icons refresh
+
