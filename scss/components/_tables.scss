@@ -5,6 +5,9 @@ table {
         tr {
             border: none;
         }
+        td {
+            padding: 10px 5px;
+        }
     }
 
     [type="checkbox"]+span:not(.lever) {
@@ -12,8 +15,49 @@ table {
         margin-left: 10px;
     }
 
+    .status {
+        width: 15px;
+        height: 15px;
+        &.atencao {
+            background-color: color("orange", "base");
+        }
+        &.sucesso {
+            background-color: color("light-green", "base");
+        }
+    }
+
+    .chip {
+        margin: 0;
+        i {
+            margin: -3px 3px 0;
+            vertical-align: middle;
+            font-size: 16px;
+        }
+    }
+
     i {
         color: color("grey", "darken-2");
         cursor: pointer;
     }
+
+    i.file {
+        display: inline-block;
+        width: 20px;
+        line-height: 20px;
+        font-size: 8px;
+        vertical-align: top;
+        text-align: center;
+        border-radius: 2px;
+        font-style: normal;
+        text-transform: uppercase;
+        margin: 2px 3px;
+        color: #fff;
+        background-color: color("grey", "darken-2");
+    }
+}
+
+.group-title {
+    color: color("grey", "darken-1");
+    margin: 30px 24px 12px;
+    font-size: 14px;
 }

@@ -5,21 +5,63 @@ block vars
 
 block content
 	.container
+		.filter
+			i.material-icons.grey-text.circle keyboard_arrow_left
+			a.btn-flat.grey-text.text-darken-2 Abril de 2018
+			i.material-icons.grey-text.circle keyboard_arrow_right
+
+		h6(style='margin-top:0;').group-title 23 de abril
 		.card.card-grid
 			.card-content
 				table.highlight
 					tbody
 						tr
-							td(width='70')
+							td(width='60')
 								label
 									input.filled-in(type='checkbox')
 									span
-							td Dalquim Ind. e Com. Ltda
-							td SC - RS
-							td Normal
-							td(width='80')
-								| 1 / 551
-							td.right-align(width='90')
+							td(width='40')
+								.status.atencao.circle
+							td
+								i.grey-text.text-lighten-1 Tomador não preenchido
+							td(width='100')
+								|
+							td(width='120').center
+								| Normal
+							td(width='100').center
+								| 
+							td(width='120').right-align
+								a
+									i.material-icons.grey-text.text-darken-2 edit
+								a
+									i.material-icons.grey-text.text-darken-2 find_in_page
+								a
+									i.material-icons.grey-text.text-darken-2 more_vert
+
+		h6.group-title 20 de abril
+		.card.card-grid
+			.card-content
+				table.highlight
+					tbody
+						tr
+							td(width='60')
+								label
+									input.filled-in(type='checkbox')
+									span
+							td(width='40')
+								.status.atencao.circle
+							td
+								| Dalquim Ind. e Com. Ltda
+							td(width='100')
+								.chip
+									| SC
+									i.material-icons arrow_forward
+									| RS
+							td(width='120').center
+								| Normal
+							td(width='100').center
+								| 
+							td(width='120').right-align
 								a
 									i.material-icons.grey-text.text-darken-2 edit
 								a
@@ -32,36 +74,57 @@ block content
 								label
 									input.filled-in(type='checkbox')
 									span
-							td JBS S.A.
-							td SC - SP
-							td Normal
 							td
+								.status.sucesso.circle
+							td
+								| JBS S.A.
+							td
+								.chip
+									| SC
+									i.material-icons arrow_forward
+									| SP
+							td.center
+								| Normal
+							td.center
 								| 1 / 550
 							td.right-align
 								a
-									i.material-icons.grey-text.text-darken-2 edit
+									i.file PDF
+								a
+									i.file XML
 								a
 									i.material-icons.grey-text.text-darken-2 find_in_page
 								a
 									i.material-icons.grey-text.text-darken-2 more_vert
 
+		h6.group-title 19 de abril
 		.card.card-grid
 			.card-content
 				table.highlight
 					tbody
 						tr
-							td(width='70')
+							td(width='60')
 								label
 									input.filled-in(type='checkbox')
 									span
-							td Dalquim Ind. e Com. Ltda
-							td SC - RS
-							td Normal
-							td(width='80')
+							td(width='40')
+								.status.sucesso.circle
+							td
+								| Dalquim Ind. e Com. Ltda
+							td(width='100')
+								.chip
+									| SC
+									i.material-icons arrow_forward
+									| RS
+							td(width='120').center
+								| Subcontratação
+							td(width='100').center
 								| 1 / 549
-							td.right-align(width='90')
+							td(width='120').right-align
 								a
-									i.material-icons.grey-text.text-darken-2 edit
+									i.file PDF
+								a
+									i.file XML
 								a
 									i.material-icons.grey-text.text-darken-2 find_in_page
 								a
