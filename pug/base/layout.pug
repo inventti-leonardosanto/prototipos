@@ -1,7 +1,8 @@
 html
-
+	block vars
+		- var title = "Menu"
 	head
-		title myrp
+		title #{title}
 		link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
 
 		script(src='../index.js')
@@ -16,7 +17,7 @@ html
 							a(href='#!')
 								i.material-icons menu
 						li
-							a.nav-title Transporte
+							a.nav-title #{title}
 					ul.right
 						li
 							a(href='#!') Empresa para Demonstração - 29628291000149

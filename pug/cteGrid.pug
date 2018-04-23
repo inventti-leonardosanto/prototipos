@@ -1,21 +1,72 @@
 extends base/layout.pug
 
+block vars
+	- var title = 'CT-e'
+
 block content
 	.container
-		.card
-			.filter
-				i.material-icons.grey-text.circle keyboard_arrow_left
-				a.btn-flat.grey-text.text-darken-2 Abril
-				i.material-icons.grey-text.circle keyboard_arrow_right
+		.card.card-grid
 			.card-content
-				table
+				table.highlight
 					tbody
 						tr
 							td(width='70')
 								label
 									input.filled-in(type='checkbox')
 									span
-							td Walmart Brasil Ltda
+							td Dalquim Ind. e Com. Ltda
+							td SC - RS
+							td Normal
+							td(width='80')
+								| 1 / 551
+							td.right-align(width='90')
+								a
+									i.material-icons.grey-text.text-darken-2 edit
+								a
+									i.material-icons.grey-text.text-darken-2 find_in_page
+								a
+									i.material-icons.grey-text.text-darken-2 more_vert
+
+						tr
+							td
+								label
+									input.filled-in(type='checkbox')
+									span
+							td JBS S.A.
+							td SC - SP
+							td Normal
+							td
+								| 1 / 550
+							td.right-align
+								a
+									i.material-icons.grey-text.text-darken-2 edit
+								a
+									i.material-icons.grey-text.text-darken-2 find_in_page
+								a
+									i.material-icons.grey-text.text-darken-2 more_vert
+
+		.card.card-grid
+			.card-content
+				table.highlight
+					tbody
+						tr
+							td(width='70')
+								label
+									input.filled-in(type='checkbox')
+									span
+							td Dalquim Ind. e Com. Ltda
+							td SC - RS
+							td Normal
+							td(width='80')
+								| 1 / 549
+							td.right-align(width='90')
+								a
+									i.material-icons.grey-text.text-darken-2 edit
+								a
+									i.material-icons.grey-text.text-darken-2 find_in_page
+								a
+									i.material-icons.grey-text.text-darken-2 more_vert
+							
 
 	.fixed-action-btn
 		a.btn-floating.btn-large.waves-effect.waves-light
