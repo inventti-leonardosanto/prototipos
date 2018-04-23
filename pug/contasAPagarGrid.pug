@@ -1,0 +1,22 @@
+extends base/layout.pug
+
+block content
+	.container
+		.card
+			.filter
+				i.material-icons.grey-text.circle keyboard_arrow_left
+				a.btn-flat.grey-text.text-darken-2 Abril
+				i.material-icons.grey-text.circle keyboard_arrow_right
+			.card-content
+				table
+					tbody
+						tr
+							td(width='70')
+								label
+									input.filled-in(type='checkbox')
+									span
+							td Walmart Brasil Ltda
+
+	.fixed-action-btn
+		a.btn-floating.btn-large.waves-effect.waves-light
+			i.material-icons add

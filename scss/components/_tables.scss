@@ -1,0 +1,18 @@
+table {
+    font-size: 15px;
+
+    tbody {
+        tr {
+            border: none;
+        }
+    }
+
+    [type="checkbox"]+span:not(.lever) {
+        height: 20px;
+        margin-left: 10px;
+    }
+
+    i {
+        color: color("grey", "darken-2");
+    }
+}
