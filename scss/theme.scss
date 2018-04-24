@@ -10,6 +10,7 @@
 @import "base/materialize";
 
 // Components
+@import "components/global";
 @import "components/grid";
 @import "components/navbar";
 @import "components/cards";
@@ -18,15 +19,3 @@
 @import "components/filter";
 @import "components/menu";
 @import "components/utilities";
-
-a {
-  outline: none;
-}
-
-small {
-    vertical-align: top;
-}
-
-.dropdown-content {
-  width: 180px !important;
-}

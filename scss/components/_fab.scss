@@ -1,7 +1,8 @@
-.fixed-action-btn ul a.btn-floating {
-  opacity: 1;
-}
-
-.fixed-action-btn ul {
-  visibility: initial;
+.fixed-action-btn {
+  ul {
+    visibility: initial;
+    a.btn-floating {
+      opacity: 1;
+    }
+  }
 }
