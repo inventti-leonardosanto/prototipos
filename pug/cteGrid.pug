@@ -8,8 +8,32 @@ block content
 		.filter
 			span#select-all.legend Selecionar tudo
 			i.material-icons.grey-text.circle keyboard_arrow_left
-			a.btn-flat.grey-text.text-darken-2 Abril de 2018
+			a.btn-flat.grey-text.text-darken-2.dropdown-trigger(href='#', data-target='filtros') Abril de 2018
 			i.material-icons.grey-text.circle keyboard_arrow_right
+
+		ul#filtros.dropdown-content
+			li
+				a(href='#!') Este mês
+			li
+				a(href='#!') Mês passado
+			li
+				a(href='#!') Últimos 3 meses
+			li
+				a(href='#!') Escolher período
+
+		ul#dropdown1.dropdown-content
+			li
+				a(href='#!') Emitir
+			li
+				a(href='#!') Visualizar
+
+		ul#dropdown2.dropdown-content
+			li
+				a(href='#!') Cancelar
+			li
+				a(href='#!') Redistribuir
+			li
+				a(href='#!') Carta de correção
 
 		div(style='margin-top:15px').subtitle Hoje
 		.card.card-grid
@@ -25,7 +49,7 @@ block content
 								.status.atencao.circle
 									i.material-icons priority_high
 							td
-								i.grey-text.text-lighten-1 Tomador não preenchido
+								i.grey-text.text-lighten-1 Tomador não informado
 							td(width='100')
 								|
 							td(width='120').center
@@ -37,7 +61,7 @@ block content
 									i.material-icons.grey-text.text-darken-2 edit
 								a.hide
 									i.material-icons.grey-text.text-darken-2 find_in_page
-								a
+								a.dropdown-trigger(href='#', data-target='dropdown1')
 									i.material-icons.grey-text.text-darken-2 more_vert
 						tr
 							td(width='60')
@@ -63,7 +87,7 @@ block content
 									i.material-icons.grey-text.text-darken-2 edit
 								a.hide
 									i.material-icons.grey-text.text-darken-2 find_in_page
-								a
+								a.dropdown-trigger(href='#', data-target='dropdown1')
 									i.material-icons.grey-text.text-darken-2 more_vert
 						tr
 							td
@@ -91,7 +115,7 @@ block content
 									i.file XML
 								a.hide
 									i.material-icons.grey-text.text-darken-2 find_in_page
-								a
+								a.dropdown-trigger(href='#', data-target='dropdown2')
 									i.material-icons.grey-text.text-darken-2 more_vert
 
 		.subtitle 20 de abril
@@ -123,7 +147,7 @@ block content
 									i.material-icons.grey-text.text-darken-2 edit
 								a.hide
 									i.material-icons.grey-text.text-darken-2 find_in_page
-								a
+								a.dropdown-trigger(href='#', data-target='dropdown1')
 									i.material-icons.grey-text.text-darken-2 more_vert
 
 						tr
@@ -152,7 +176,7 @@ block content
 									i.file XML
 								a.hide
 									i.material-icons.grey-text.text-darken-2 find_in_page
-								a
+								a.dropdown-trigger(href='#', data-target='dropdown2')
 									i.material-icons.grey-text.text-darken-2 more_vert
 
 		.subtitle 19 de abril
@@ -186,7 +210,7 @@ block content
 									i.file XML
 								a.hide
 									i.material-icons.grey-text.text-darken-2 find_in_page
-								a
+								a.dropdown-trigger(href='#', data-target='dropdown2')
 									i.material-icons.grey-text.text-darken-2 more_vert
 							
 

@@ -17,3 +17,12 @@
 @import "components/fab";
 @import "components/filter";
 @import "components/menu";
+
+
+a {
+    outline: none;
+}
+
+.dropdown-content {
+    width: 180px !important;
+}
