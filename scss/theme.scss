@@ -1,4 +1,4 @@
-@charset "UTF-8"; 
+@charset "UTF-8";
 
 // Color
 @import "base/color-variables";
@@ -17,12 +17,16 @@
 @import "components/fab";
 @import "components/filter";
 @import "components/menu";
-
+@import "components/utilities";
 
 a {
-    outline: none;
+  outline: none;
+}
+
+small {
+    vertical-align: top;
 }
 
 .dropdown-content {
-    width: 180px !important;
+  width: 180px !important;
 }

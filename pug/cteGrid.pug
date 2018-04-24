@@ -11,31 +11,9 @@ block content
 			a.btn-flat.grey-text.text-darken-2.dropdown-trigger(href='#', data-target='filtros') Abril de 2018
 			i.material-icons.grey-text.circle keyboard_arrow_right
 
-		ul#filtros.dropdown-content
-			li
-				a(href='#!') Este mês
-			li
-				a(href='#!') Mês passado
-			li
-				a(href='#!') Últimos 3 meses
-			li
-				a(href='#!') Escolher período
-
-		ul#dropdown1.dropdown-content
-			li
-				a(href='#!') Emitir
-			li
-				a(href='#!') Visualizar
-
-		ul#dropdown2.dropdown-content
-			li
-				a(href='#!') Cancelar
-			li
-				a(href='#!') Redistribuir
-			li
-				a(href='#!') Carta de correção
-
-		div(style='margin-top:15px').subtitle Hoje
+		div(style='margin-top:15px').subtitle
+			span Hoje
+			span.serie-numero Série - Nº
 		.card.card-grid
 			.card-content
 				table.highlight
@@ -52,7 +30,7 @@ block content
 								i.grey-text.text-lighten-1 Tomador não informado
 							td(width='100')
 								|
-							td(width='120').center
+							td(width='120').center.hide
 								| Normal
 							td(width='100').center
 								| 
@@ -78,7 +56,7 @@ block content
 									| SC
 									i.material-icons arrow_forward
 									| SP
-							td(width='120').center
+							td(width='120').center.hide
 								| Normal
 							td(width='100').center
 								| 
@@ -104,10 +82,10 @@ block content
 									| SC
 									i.material-icons arrow_forward
 									| SP
-							td.center
+							td.center.hide
 								| Normal
 							td.center
-								| 3 / 551
+								| 3 - 551
 							td.right-align
 								a
 									i.file PDF
@@ -118,7 +96,8 @@ block content
 								a.dropdown-trigger(href='#', data-target='dropdown2')
 									i.material-icons.grey-text.text-darken-2 more_vert
 
-		.subtitle 20 de abril
+		.subtitle
+			span 23 de abril
 		.card.card-grid
 			.card-content
 				table.highlight
@@ -138,7 +117,7 @@ block content
 									| SC
 									i.material-icons arrow_forward
 									| RS
-							td(width='120').center
+							td(width='120').center.hide
 								| Subcontratação
 							td(width='100').center
 								| 
@@ -165,10 +144,10 @@ block content
 									| SC
 									i.material-icons arrow_forward
 									| SP
-							td.center
+							td.center.hide
 								| Normal
 							td.center
-								| 3 / 550
+								| 3 - 550
 							td.right-align
 								a
 									i.file PDF
@@ -179,7 +158,8 @@ block content
 								a.dropdown-trigger(href='#', data-target='dropdown2')
 									i.material-icons.grey-text.text-darken-2 more_vert
 
-		.subtitle 19 de abril
+		.subtitle
+			span 19 de abril
 		.card.card-grid
 			.card-content
 				table.highlight
@@ -199,10 +179,10 @@ block content
 									| SC
 									i.material-icons arrow_forward
 									| RS
-							td(width='120').center
+							td(width='120').center.hide
 								| Subcontratação
 							td(width='100').center
-								| 4 / 300
+								| 4 - 300
 							td(width='100').right-align
 								a
 									i.file PDF
@@ -212,7 +192,31 @@ block content
 									i.material-icons.grey-text.text-darken-2 find_in_page
 								a.dropdown-trigger(href='#', data-target='dropdown2')
 									i.material-icons.grey-text.text-darken-2 more_vert
-							
+
+	ul#filtros.dropdown-content
+		li
+			a(href='#!') Este mês
+		li
+			a(href='#!') Mês passado
+		li
+			a(href='#!') Últimos 3 meses
+		li
+			a(href='#!') Escolher período
+
+	ul#dropdown1.dropdown-content
+		li
+			a(href='#!') Emitir
+		li
+			a(href='#!') Visualizar
+
+	ul#dropdown2.dropdown-content
+		li
+			a(href='#!') Cancelar
+		li
+			a(href='#!') Redistribuir
+		li
+			a(href='#!') Carta de correção
+
 
 	.fixed-action-btn
 		a.btn-floating.btn-large.waves-effect.waves-light

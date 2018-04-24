@@ -1,26 +1,103 @@
 extends base/layout.pug
 
 block content
-	.container
-		.row
-			.col.s4
-				.card-panel
-					h5.card-title Transporte
 
-					ul.menu
-						li
-							a(href='cteGrid.pug')
-								i.material-icons.left.tiny arrow_forward
+	#top
+		nav.buscador.white
+			.nav-wrapper.white
+				.input-field
+					i.material-icons.grey-text.prefix search
+					input(type='search', placeholder='O que você quer fazer?', autocomplete='off')
+					i.material-icons.grey-text mic
+
+	.container(style="margin-top: 120px;")
+		.row
+			.col.s6
+				.row
+					.col.s6
+						.card-panel.light-green.white-text.center.pointer
+							i.material-icons.small account_balance_wallet
+							h5
+								small A receber hoje
+								br
+								small R$ 
+								| 1000,00
+					.col.s6
+						.card-panel.light-green.white-text.center.pointer
+							i.material-icons.small account_balance_wallet
+							h5
+								small A pagar hoje
+								br
+								small R$ 
+								| 500,00
+				.card-panel.cyan
+					h5.card-title.white-text Meu dia a dia
+
+					.row
+						.col.s6
+							ul.menu.white-text
+								li
+									a(href='cteGrid.pug')
+										i.material-icons.left.tiny arrow_forward
+										| CT-e
+								li
+									a(href='!#')
+										i.material-icons.left.tiny arrow_forward
+										| MDF-e
+								li
+									a(href='!#')
+										i.material-icons.left.tiny arrow_forward
+										| Veículos
+								li
+									a(href='!#')
+										i.material-icons.left.tiny arrow_forward
+										| Motoristas
+
+						.col.s6
+							ul.menu.white-text
+								li
+									a(href='!#')
+										i.material-icons.left.tiny arrow_forward
+										| Clientes
+								li
+									a(href='!#')
+										i.material-icons.left.tiny arrow_forward
+										| Fornecedores
+								li
+									a(href='!#')
+										i.material-icons.left.tiny arrow_forward
+										| Financeiro
+			
+			.col.s6
+				.row
+					.col.s6
+						.card-panel.orange.white-text.center.pointer
+							i.material-icons.small add_circle_outline
+							h5
+								small Emitir
+								br
 								| CT-e
-						li
-							a(href='!#')
-								i.material-icons.left.tiny arrow_forward
+
+					.col.s6
+						.card-panel.orange.white-text.center.pointer
+							i.material-icons.small add_circle_outline
+							h5
+								small Emitir
+								br
 								| MDF-e
-						li
-							a(href='!#')
-								i.material-icons.left.tiny arrow_forward
-								| Veículos
-						li
-							a(href='!#')
-								i.material-icons.left.tiny arrow_forward
-								| Motoristas
+
+					.col.s6
+						.card-panel.orange.white-text.center.pointer
+							i.material-icons.small add_circle_outline
+							h5
+								small Adicione mais
+								br
+								| motoristas
+
+					.col.s6
+						.card-panel.orange.white-text.center.pointer
+							i.material-icons.small add_circle_outline
+							h5
+								small Adicione mais
+								br
+								| veículos

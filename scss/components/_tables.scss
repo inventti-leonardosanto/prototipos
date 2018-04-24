@@ -68,17 +68,20 @@ table {
   }
 }
 
-.legend,
 .subtitle {
   color: color("grey", "darken-1");
   font-size: 14px;
-}
-
-.subtitle {
   margin: 30px 25px 10px;
+  position: relative;
+  .serie-numero {
+    position: absolute;
+    right: 105px;
+  }
 }
 
 .legend {
+  color: color("grey", "darken-1");
+  font-size: 14px;
   position: absolute;
   left: 15px;
   margin-top: 2px; 
