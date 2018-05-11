@@ -1,0 +1,168 @@
+extends base/layout.pug
+
+block content
+
+	#top
+		nav.buscador.white
+			.nav-wrapper.white
+				.input-field
+					i.material-icons.grey-text.prefix search
+					input(type='search', placeholder='O que você quer fazer?', autocomplete='off')
+					i.material-icons.grey-text mic
+
+	.container(style="margin-top: 120px;")
+		.row
+			.col.s6
+				.row.hide
+					.col.s6
+						.card-panel.cyan.white-text.center.pointer
+							i.material-icons.small account_balance_wallet
+							h5
+								small A receber hoje
+								br
+								small R$ 
+								| 1000,00
+					.col.s6
+						.card-panel.cyan.white-text.center.pointer
+							i.material-icons.small account_balance_wallet
+							h5
+								small A pagar hoje
+								br
+								small R$ 
+								| 500,00
+
+				.card-panel
+					h5.card-title Primeiros passos
+					p Para emitir documentos com validade fiscal você precisa completar e salvar os cadastros abaixo.
+					ul.list
+						li.waves-effect
+							.valign-wrapper
+								span.left.circle.white-text 1
+								.title
+									a.blue-text Certificado digital
+									br
+									span Importe o certificado do tipo A1
+						li.waves-effect
+							.valign-wrapper
+								span.left.circle.white-text 2
+								.title
+									a.blue-text Minha empresa
+									br
+									span Complete o cadastro
+						li.waves-effect
+							.valign-wrapper
+								span.left.circle.white-text 3
+								.title
+									a.blue-text Importar motoristas
+									br
+									span Adicione vários motoristas de uma vez
+						li.waves-effect
+							.valign-wrapper
+								span.left.circle.white-text 4
+								.title
+									a.blue-text Importar veículos
+									br
+									span Adicione vários veículos de uma vez
+										
+				.card-panel
+					h5.card-title Meu dia a dia
+					p Acessos rápidos para facilitar o seu dia a dia.
+					.row
+						.col.s6
+							ul.menu
+								li
+									a(href='cteGrid.pug')
+										i.material-icons.left.tiny arrow_forward
+										| CT-e
+								li
+									a(href='!#')
+										i.material-icons.left.tiny arrow_forward
+										| MDF-e
+								li
+									a(href='!#')
+										i.material-icons.left.tiny arrow_forward
+										| Veículos
+								li
+									a(href='!#')
+										i.material-icons.left.tiny arrow_forward
+										| Motoristas
+
+						.col.s6
+							ul.menu
+								li
+									a(href='!#')
+										i.material-icons.left.tiny arrow_forward
+										| Clientes
+								li
+									a(href='!#')
+										i.material-icons.left.tiny arrow_forward
+										| Fornecedores
+								li
+									a(href='!#')
+										i.material-icons.left.tiny arrow_forward
+										| Resumo Financeiro
+			
+			.col.s6
+				.row
+					.col.s6
+						.card-panel.cyan.white-text.center.pointer
+							i.material-icons.small add_circle_outline
+							h5
+								small Emissão de
+								br
+								| CT-e
+					.col.s6
+						.card-panel.cyan.white-text.center.pointer
+							i.material-icons.small add_circle_outline
+							h5
+								small Emissão de
+								br
+								| MDF-e
+					.col.s6
+						a.sidenav-trigger(href='#', data-target='motorista-qa')
+							.card-panel.cyan.white-text.center.pointer
+								i.material-icons.small add_circle_outline
+								h5
+									small Adicione mais
+									br
+									| motoristas
+					.col.s6
+						.card-panel.cyan.white-text.center.pointer
+							i.material-icons.small add_circle_outline
+							h5
+								small Adicione mais
+								br
+								| veículos
+					.col.s6
+						.card-panel.cyan.white-text.center.pointer
+							i.material-icons.small help_outline
+							h5
+								small Central de
+								br
+								| ajuda
+					.col.s6
+						.card-panel.cyan.white-text.center.pointer
+							i.material-icons.small videocam
+							h5
+								small Assistir
+								br
+								| videoaulas
+
+			#motorista-qa.sidenav(style='width: 700px;')
+				form
+					h5
+						| Novo Motorista
+						small
+							a.right Importar motoristas
+					.row
+						.col.s6
+							.input-field
+								input#cpf(type='text', required='required')
+								label(for='cpf') CPF
+						.col.s6
+							.input-field
+								input#nome(type='text', required='required')
+								label(for='nome') Nome
+					p.right-align
+						a.waves-effect.btn-flat Cancelar
+						a.waves-effect.waves-light.btn.btn-large.green.white-text Salvar

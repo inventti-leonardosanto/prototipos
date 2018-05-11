@@ -20,3 +20,51 @@
 @import "components/filter";
 @import "components/menu";
 @import "components/utilities";
+@import "components/identificacao";
+
+.sidenav form {
+  padding: 0 20px;
+}
+
+.list {
+  border-radius: 4px;
+  background-color: color("blue", "lighten-5");
+  
+  .waves-effect {
+    width: 100%;
+    border-radius: 2px;
+  }
+
+  .subheader {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin: 0.75rem 16px;
+  }
+
+  li {
+    padding: 0 16px;
+  }
+
+  li .valign-wrapper {
+    min-height: 72px;
+  }
+
+  span.circle {
+    line-height: 44px;
+    width: 44px;
+    text-align: center;
+    margin-right: 15px;
+    background-color: #2196f3;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .title span {
+    color: rgba(0, 0, 0, 0.54);
+  }
+
+  .ml-auto {
+    margin-left: auto;
+  }
+}

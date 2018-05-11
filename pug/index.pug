@@ -1,100 +1,45 @@
-extends base/layout.pug
+html
+	block vars
+		- var title = "Criar conta"
+	head
+		title #{title}
+		link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
 
-block content
+		script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
+		script(src='../index.js')
 
-	#top
-		nav.buscador.white
-			.nav-wrapper.white
-				.input-field
-					i.material-icons.grey-text.prefix search
-					input(type='search', placeholder='O que você quer fazer?', autocomplete='off')
-					i.material-icons.grey-text mic
+	body.grey.lighten-4.identificacao
+		.container
+			.card.horizontal
+				.card-stacked
+					.card-content.center
+						img.logo(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/40532/logo-myrp-transp.png', alt='myrp')
+						h5 Crie sua conta
+						p
+							span.grey-text.hide Experimente por 7 dias. 
+							a(href='entrar.pug') Já possui uma conta?
+						form
+							.row
+								.col.s12.input-field
+									input#email(type='text')
+									label(for='email') Qual é o seu e-mail?
+								.col.s12.input-field
+									input#senha(type='text')
+									label(for='senha') Defina uma senha de acesso
+								.col.s12.input-field
+									input#nome(type='text')
+									label(for='nome') Nome próprio
+								.col.s12.input-field
+									input#telefone(type='text')
+									label(for='telefone') Telefone
+								.col.s12.input-field
+									input#cnpj(type='text')
+									label(for='cnpj') CNPJ da empresa
+						.fab-extended
+							a.btn-floating.btn-large.waves-effect.waves-light.blue(href='dashboard.pug')
+								i.material-icons.left done
+								|  Criar conta
+				.card-image
+					img(src='https://via.placeholder.com/320x620')
 
-	.container(style="margin-top: 120px;")
-		.row
-			.col.s6
-				.row
-					.col.s6
-						.card-panel.cyan.white-text.center.pointer
-							i.material-icons.small account_balance_wallet
-							h5
-								small A receber hoje
-								br
-								small R$ 
-								| 1000,00
-					.col.s6
-						.card-panel.cyan.white-text.center.pointer
-							i.material-icons.small account_balance_wallet
-							h5
-								small A pagar hoje
-								br
-								small R$ 
-								| 500,00
-				.card-panel.cyan
-					h5.card-title.white-text Meu dia a dia
-
-					.row
-						.col.s6
-							ul.menu.white-text
-								li
-									a(href='cteGrid.pug')
-										i.material-icons.left.tiny arrow_forward
-										| CT-e
-								li
-									a(href='!#')
-										i.material-icons.left.tiny arrow_forward
-										| MDF-e
-								li
-									a(href='!#')
-										i.material-icons.left.tiny arrow_forward
-										| Veículos
-								li
-									a(href='!#')
-										i.material-icons.left.tiny arrow_forward
-										| Motoristas
-
-						.col.s6
-							ul.menu.white-text
-								li
-									a(href='!#')
-										i.material-icons.left.tiny arrow_forward
-										| Clientes
-								li
-									a(href='!#')
-										i.material-icons.left.tiny arrow_forward
-										| Fornecedores
-								li
-									a(href='!#')
-										i.material-icons.left.tiny arrow_forward
-										| Financeiro
-			
-			.col.s6
-				.row
-					.col.s6
-						.card-panel.orange.white-text.center.pointer
-							i.material-icons.small add_circle_outline
-							h5
-								small Emissão de
-								br
-								| CT-e
-					.col.s6
-						.card-panel.orange.white-text.center.pointer
-							i.material-icons.small add_circle_outline
-							h5
-								small Emissão de
-								br
-								| MDF-e
-					.col.s6
-						.card-panel.orange.white-text.center.pointer
-							i.material-icons.small add_circle_outline
-							h5
-								small Adicione mais
-								br
-								| motoristas
-					.col.s6
-						.card-panel.orange.white-text.center.pointer
-							i.material-icons.small add_circle_outline
-							h5
-								small Adicione mais
-								br
-								| veículos

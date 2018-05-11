@@ -1,0 +1,69 @@
+/* base */
+.identificacao {
+  background-color: #e0e0e0;
+  font-family: Roboto;
+  background: url(http://www.myrp.com.br/wp-content/uploads/2017/02/home-funcionalidades-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-position: 50%;
+
+  .container {
+    margin: 60px auto;
+  }
+
+  .card.horizontal .card-image img {
+    border-radius: 0 2px 2px 0;
+  }
+
+  .row {
+    margin: 0 -0.75rem;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .container {
+    width: 750px;
+  }
+
+  .card .card-content {
+    padding: 40px 40px 20px;
+  }
+
+  p {
+    margin-bottom: 1rem !important;
+  }
+
+  /* custom */
+  .fab-extended {
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%);
+  }
+
+  .fab-extended i.left {
+    margin-right: 8px;
+    font-size: 24px;
+  }
+
+  .fab-extended .btn-floating {
+    width: auto;
+    border-radius: 32px;
+    padding-left: 16px;
+    padding-right: 20px;
+    height: 48px;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+  }
+
+  .fab-extended i,
+  .fab-extended .btn-floating {
+    line-height: 48px !important;
+  }
+
+  input {
+    height: 2.75rem !important;
+  }
+}
