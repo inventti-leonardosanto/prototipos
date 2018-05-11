@@ -35,17 +35,6 @@ table {
     }
   }
 
-  .chip {
-    margin: 0;
-    line-height: 24px;
-    height: 24px;
-    i {
-      margin: -3px 3px 0;
-      vertical-align: middle;
-      font-size: 16px;
-    }
-  }
-
   i {
     color: color("grey", "darken-2");
     cursor: pointer;
@@ -84,9 +73,16 @@ table {
   font-size: 14px;
   position: absolute;
   left: 15px;
-  margin-top: 2px; 
+  margin-top: 2px;
   padding: 5px 10px;
   border-radius: 36px;
   background-color: color("grey", "lighten-3");
   cursor: pointer;
+}
+
+.icon {
+  font-size: 17px;
+  margin: 3px;
+  vertical-align: bottom;
+  line-height: 12px;
 }

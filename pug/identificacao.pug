@@ -1,0 +1,42 @@
+html
+	block vars
+		- var title = "Bem-vindo"
+	head
+		title #{title}
+		link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+
+		script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
+		script(src='../index.js')
+
+	body.grey.lighten-4
+		.container
+			.card.horizontal
+				.card-stacked
+					.card-content
+						img.logo(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/40532/logo-myrp-transp.png', alt='myrp')
+						h5 Criar sua conta
+						form
+							.row
+								.col.s12.input-field
+									input#email(type='text')
+									label(for='email') Qual é o seu e-mail?
+								.col.s12.input-field
+									input#senha(type='text')
+									label(for='senha') Defina uma senha
+								.col.s12.input-field
+									input#nome(type='text')
+									label(for='nome') Nome
+								.col.s12.input-field
+									input#telefone(type='text')
+									label(for='telefone') Telefone
+								.col.s12.input-field
+									input#cnpj(type='text')
+									label(for='cnpj') CNPJ
+				.card-image
+					img(src='https://via.placeholder.com/300x600')
+
+		.fixed-action-btn.fab-extended.fab-center
+			a.btn-floating.btn-large.waves-effect.waves-light.blue
+				i.material-icons.left done
+				|  Criar conta
