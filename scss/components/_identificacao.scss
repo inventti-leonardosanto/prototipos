@@ -7,7 +7,7 @@
   background-position: 50%;
 
   .container {
-    margin: 60px auto;
+    margin: 8% auto;
   }
 
   .card.horizontal .card-image img {
@@ -26,8 +26,13 @@
     width: 750px;
   }
 
+  .card-panel,
   .card .card-content {
     padding: 40px 40px 20px;
+  }
+
+  .card-panel {
+    padding-bottom: 40px;
   }
 
   p {
@@ -65,5 +70,26 @@
 
   input {
     height: 2.75rem !important;
+  }
+
+  .segmentos {
+    .nome {
+      padding: 15px 24px;
+      border: 1px solid color("grey", "lighten-1");
+      border-radius: 4px;
+      margin: 8px 0;
+      //color: color("grey", "darken-2");
+      text-align: left;
+      cursor: pointer;
+    }
+
+    [type="checkbox"] + span:not(.lever) {
+      height: 20px;
+      padding-left: 20px;
+    }
+
+    .ml-auto {
+      margin-left: auto;
+    }
   }
 }
