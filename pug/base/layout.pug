@@ -1,6 +1,6 @@
 html
 	block vars
-		- var title = "Bem-vindo"
+		- var title = "myrp"
 	head
 		title #{title}
 		link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
@@ -9,31 +9,5 @@ html
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
 		script(src='../index.js')
 
-	body.grey.lighten-4
-		.navbar-fixed
-			nav
-				.nav-wrapper
-					ul
-						li
-							a(href='index.pug')
-								i.material-icons menu
-						li
-							a.nav-title #{title}
-					ul.right
-						li
-							a(href='#!') Empresa para Demonstração - 29628291000149
-						li
-							a(href='#!')
-								i.material-icons notifications
-						li
-							a(href='#!')
-								i.material-icons apps
-						li
-							a(href='#!')
-								i.material-icons help
-						li
-							a(href='#!')
-								i.material-icons account_circle
-
-		.content
-			block content
+	body.grey.lighten-4.cadastro
+		block content

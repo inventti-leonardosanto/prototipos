@@ -1,67 +1,61 @@
-html
-	block vars
-		- var title = "Criar conta"
-	head
-		title #{title}
-		link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+extends base/layout.pug
 
-		script(src='https://code.jquery.com/jquery-3.2.1.min.js')
-		script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
-		script(src='../index.js')
+block vars
+	- var title = 'Criar conta'
 
-	body.grey.lighten-4.cobranca
-		.container
-			.card.horizontal
-				.card-stacked
-					.card-content.center
-						a.back(href='identificacao.pug')
-							i.material-icons.left arrow_back
-						img.logo(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/40532/logo-myrp-transp.png', alt='myrp')
-						h5 Crie sua conta
-						p
-							span.grey-text.hide Experimente por 7 dias. 
-							a(href='index.pug') Já tem uma conta?
-						p Dados de cobrança
-						form
-							.row
-								.col.s6.input-field
-									input#nome(type='text')
-									label(for='nome') Nome próprio do responsável
-								.col.s6.input-field
-									input#cpf(type='text')
-									label(for='cpf') CPF do responsável
-							.row
-								.col.s6.input-field
-									input#cep(type='text', value='89042-048')
-									label(for='cep') CEP
-							.row
-								.col.s6.input-field
-									input#logradouro(type='text', value='Rua Teodoro Sampaio')
-									label(for='logradouro') Logradouro
-								.col.s6.input-field
-									input#numero(type='text', value='162')
-									label(for='numero') Número
-							.row
-								.col.s6.input-field
-									input#complemento(type='text')
-									label(for='complemento') Complemento
-								.col.s6.input-field
-									input#bairro(type='text', value='Água Verde')
-									label(for='bairro') Bairro
-							.row
-								.col.s6.input-field
-									input#estado(type='text', value='Santa Catarina')
-									label(for='estado') Estado
-								.col.s6.input-field
-									input#pais(type='text', value='Blumenau')
-									label(for='pais') Município
-								
-							label Clicando em "Finalizar" você concorda com nossos 
-								a(href='#') termos de uso
-						.fab-extended
-							a.btn-floating.btn-large.waves-effect.waves-light.blue(href='dashboard.pug')
-								i.material-icons.left done
-								|  Finalizar
-				//.card-image
-				//	img(src='https://via.placeholder.com/320x620')
+block content
+	.container
+		.card.horizontal
+			.card-stacked
+				.card-content.center
+					a.back(href='identificacao.pug')
+						i.material-icons.left arrow_back
+					img.logo(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/40532/logo-myrp-transp.png', alt='myrp')
+					h5 Crie sua conta
+					p
+						span.grey-text.hide Experimente por 7 dias. 
+						a(href='index.pug') Já tem uma conta?
+					p Dados de cobrança
+					form
+						.row
+							.col.s6.input-field
+								input#nome(type='text')
+								label(for='nome') Nome próprio do responsável
+							.col.s6.input-field
+								input#cpf(type='text')
+								label(for='cpf') CPF do responsável
+						.row
+							.col.s6.input-field
+								input#cep(type='text', value='89042-048')
+								label(for='cep') CEP
+						.row
+							.col.s6.input-field
+								input#logradouro(type='text', value='Rua Teodoro Sampaio')
+								label(for='logradouro') Logradouro
+							.col.s6.input-field
+								input#numero(type='text', value='162')
+								label(for='numero') Número
+						.row
+							.col.s6.input-field
+								input#complemento(type='text')
+								label(for='complemento') Complemento
+							.col.s6.input-field
+								input#bairro(type='text', value='Água Verde')
+								label(for='bairro') Bairro
+						.row
+							.col.s6.input-field
+								input#estado(type='text', value='Santa Catarina')
+								label(for='estado') Estado
+							.col.s6.input-field
+								input#pais(type='text', value='Blumenau')
+								label(for='pais') Município
+							
+						label Clicando em "Finalizar" você concorda com nossos 
+							a(href='#') termos de uso
+					.fab-extended
+						a.btn-floating.btn-large.waves-effect.waves-light.blue(href='dashboard.pug')
+							i.material-icons.left done
+							|  Finalizar
+			//.card-image
+			//	img(src='https://via.placeholder.com/320x620')
 

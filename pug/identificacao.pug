@@ -1,46 +1,40 @@
-html
-	block vars
-		- var title = "Criar conta"
-	head
-		title #{title}
-		link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+extends base/layout.pug
 
-		script(src='https://code.jquery.com/jquery-3.2.1.min.js')
-		script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
-		script(src='../index.js')
+block vars
+	- var title = 'Criar conta'
 
-	body.grey.lighten-4.identificacao
-		.container
-			.card.horizontal
-				.card-stacked
-					.card-content.center
-						a.back(href='segmentacao.pug')
-							i.material-icons.left arrow_back
-						img.logo(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/40532/logo-myrp-transp.png', alt='myrp')
-						h5 Crie sua conta
-						p
-							span.grey-text.hide Experimente por 7 dias. 
-							a(href='index.pug') Já tem uma conta?
+block content
+	.container
+		.card.horizontal
+			.card-stacked
+				.card-content.center
+					a.back(href='segmentacao.pug')
+						i.material-icons.left arrow_back
+					img.logo(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/40532/logo-myrp-transp.png', alt='myrp')
+					h5 Crie sua conta
+					p
+						span.grey-text.hide Experimente por 7 dias. 
+						a(href='index.pug') Já tem uma conta?
 
-						p Fale sobre você
-						form
-							.row
-								.col.s12.input-field
-									input#cnpj(type='text', value='68.535.294/0001-90')
-									label(for='cnpj') CNPJ da empresa
-								.col.s12.input-field
-									input#email(type='text', value="leonardo.santo@inventti.com.br")
-									label(for='email') Qual é o seu e-mail?
-								.col.s12.input-field
-									input#senha(type='text')
-									label(for='senha') Defina uma senha de acesso
-								.col.s12.input-field
-									input#telefone(type='text', value='(47) 3036-7606')
-									label(for='telefone') Telefone
-						.fab-extended
-							a.btn-floating.btn-large.waves-effect.waves-light.blue(href='cobranca.pug')
-								i.material-icons.left arrow_forward
-								|  Próximo
-				.card-image
-					img(src='https://via.placeholder.com/320x600')
+					p Fale sobre você
+					form
+						.row
+							.col.s12.input-field
+								input#cnpj(type='text', value='68.535.294/0001-90')
+								label(for='cnpj') CNPJ da empresa
+							.col.s12.input-field
+								input#email(type='text', value="leonardo.santo@inventti.com.br")
+								label(for='email') Qual é o seu e-mail?
+							.col.s12.input-field
+								input#senha(type='text')
+								label(for='senha') Defina uma senha de acesso
+							.col.s12.input-field
+								input#telefone(type='text', value='(47) 3036-7606')
+								label(for='telefone') Telefone
+					.fab-extended
+						a.btn-floating.btn-large.waves-effect.waves-light.blue(href='cobranca.pug')
+							i.material-icons.left arrow_forward
+							|  Próximo
+			.card-image
+				img(src='https://via.placeholder.com/320x600')
 

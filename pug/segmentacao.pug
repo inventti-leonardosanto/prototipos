@@ -1,63 +1,57 @@
-html
-	block vars
-		- var title = "Criar conta"
-	head
-		title #{title}
-		link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+extends base/layout.pug
 
-		script(src='https://code.jquery.com/jquery-3.2.1.min.js')
-		script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
-		script(src='../index.js')
+block vars
+	- var title = 'Criar conta'
 
-	body.grey.lighten-4.segmentacao
-		.container
-			.card.horizontal
-				.card-stacked
-					.card-content.center
-						img.logo(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/40532/logo-myrp-transp.png', alt='myrp')
-						h5 Crie sua conta
-						p
-							span.grey-text.hide Experimente por 7 dias. 
-							a(href='index.pug') Já tem uma conta?
+block content
+	.container
+		.card.horizontal
+			.card-stacked
+				.card-content.center
+					img.logo(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/40532/logo-myrp-transp.png', alt='myrp')
+					h5 Crie sua conta
+					p
+						span.grey-text.hide Experimente por 7 dias. 
+						a(href='index.pug') Já tem uma conta?
 
-						p Quais os segmentos da sua empresa?
-						.segmentos
-							.row
-								.col.s12
-									.nome.valign-wrapper
-										| Varejo
-										label.ml-auto
-											input.filled-in(type='checkbox')
-											span
-								.col.s12
-									.nome.valign-wrapper
-										| Atacado
-										label.ml-auto
-											input.filled-in(type='checkbox')
-											span
-								.col.s12
-									.nome.valign-wrapper
-										| Indústria
-										label.ml-auto
-											input.filled-in(type='checkbox')
-											span
-								.col.s12
-									.nome.valign-wrapper
-										| Serviços
-										label.ml-auto
-											input.filled-in(type='checkbox')
-											span
-								.col.s12
-									.nome.valign-wrapper
-										| Transporte
-										label.ml-auto
-											input.filled-in(type='checkbox')
-											span
+					p Quais os segmentos da sua empresa?
+					.segmentos
+						.row
+							.col.s12
+								.nome.valign-wrapper
+									| Varejo
+									label.ml-auto
+										input.filled-in(type='checkbox')
+										span
+							.col.s12
+								.nome.valign-wrapper
+									| Atacado
+									label.ml-auto
+										input.filled-in(type='checkbox')
+										span
+							.col.s12
+								.nome.valign-wrapper
+									| Indústria
+									label.ml-auto
+										input.filled-in(type='checkbox')
+										span
+							.col.s12
+								.nome.valign-wrapper
+									| Serviços
+									label.ml-auto
+										input.filled-in(type='checkbox')
+										span
+							.col.s12
+								.nome.valign-wrapper
+									| Transporte
+									label.ml-auto
+										input.filled-in(type='checkbox')
+										span
 
-						.fab-extended
-							a.btn-floating.btn-large.waves-effect.waves-light.blue(href='identificacao.pug')
-								i.material-icons.left arrow_forward
-								|  Próximo
-				.card-image
-					img(src='https://via.placeholder.com/320x600')
+					.fab-extended
+						a.btn-floating.btn-large.waves-effect.waves-light.blue(href='identificacao.pug')
+							i.material-icons.left arrow_forward
+							|  Próximo
+			.card-image
+				img(src='https://via.placeholder.com/320x600')
 
