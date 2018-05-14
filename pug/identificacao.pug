@@ -14,32 +14,33 @@ html
 			.card.horizontal
 				.card-stacked
 					.card-content.center
+						a.back(href='segmentacao.pug')
+							i.material-icons.left arrow_back
 						img.logo(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/40532/logo-myrp-transp.png', alt='myrp')
 						h5 Crie sua conta
 						p
 							span.grey-text.hide Experimente por 7 dias. 
 							a(href='index.pug') Já tem uma conta?
+
+						p Fale sobre você
 						form
 							.row
 								.col.s12.input-field
-									input#email(type='text')
+									input#cnpj(type='text', value='68.535.294/0001-90')
+									label(for='cnpj') CNPJ da empresa
+								.col.s12.input-field
+									input#email(type='text', value="leonardo.santo@inventti.com.br")
 									label(for='email') Qual é o seu e-mail?
 								.col.s12.input-field
 									input#senha(type='text')
 									label(for='senha') Defina uma senha de acesso
 								.col.s12.input-field
-									input#nome(type='text')
-									label(for='nome') Nome próprio
-								.col.s12.input-field
-									input#telefone(type='text')
+									input#telefone(type='text', value='(47) 3036-7606')
 									label(for='telefone') Telefone
-								.col.s12.input-field
-									input#cnpj(type='text')
-									label(for='cnpj') CNPJ da empresa
 						.fab-extended
-							a.btn-floating.btn-large.waves-effect.waves-light.blue(href='dashboard.pug')
-								i.material-icons.left done
-								|  Criar conta
+							a.btn-floating.btn-large.waves-effect.waves-light.blue(href='cobranca.pug')
+								i.material-icons.left arrow_forward
+								|  Próximo
 				.card-image
-					img(src='https://via.placeholder.com/320x620')
+					img(src='https://via.placeholder.com/320x600')
 

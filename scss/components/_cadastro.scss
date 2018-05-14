@@ -1,5 +1,6 @@
-/* base */
-.identificacao {
+.segmentacao,
+.identificacao,
+.cobranca {
   background-color: #e0e0e0;
   font-family: Roboto;
   background: url(http://www.myrp.com.br/wp-content/uploads/2017/02/home-funcionalidades-bg.jpg) no-repeat center center fixed;
@@ -7,7 +8,7 @@
   background-position: 50%;
 
   .container {
-    margin: 8% auto;
+    margin: 3.5% auto;
   }
 
   .card.horizontal .card-image img {
@@ -20,6 +21,12 @@
 
   .logo {
     width: 100px;
+  }
+
+  .back {
+    position: absolute;
+    left: 40px;
+    top: 50px;
   }
 
   .container {

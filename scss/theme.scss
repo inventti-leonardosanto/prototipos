@@ -21,7 +21,7 @@
 @import "components/filter";
 @import "components/menu";
 @import "components/utilities";
-@import "components/identificacao";
+@import "components/cadastro";
 
 .sidenav form {
   padding: 0 20px;
@@ -51,6 +51,7 @@
     min-height: 72px;
   }
 
+  i,
   span.circle {
     line-height: 44px;
     width: 44px;
@@ -58,7 +59,7 @@
     margin-right: 15px;
     background-color: #2196f3;
     font-weight: 500;
-    font-size: 1.2rem;
+    //font-size: 1.2rem;
   }
 
   .title span {
