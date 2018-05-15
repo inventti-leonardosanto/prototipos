@@ -1,4 +1,5 @@
 import './scss/theme'
+import logo from './img/logo.png'
 
 $(function() {
     $('#select-all').on('click', () => {
@@ -15,6 +16,7 @@ $(function() {
         }
     });
 
+    $('.modal').modal();
     $('.dropdown-trigger').dropdown();
     $('.sidenav').sidenav({
         edge: 'right'
