@@ -8,14 +8,14 @@ block content
 		#login.card-panel(style="position:relative;")
 			.center
 				img.logo(src='../img/logo.png', alt='myrp' style="margin-bottom: 1rem;")
-			form#formEntrar
+			form
 				.row
 					.col.s12.input-field
-						input#usuario.required(type='text', autofocus='', name='usuario')
+						input#usuario(type='text')
 						label(for='usuario') Informe seu e-mail
 				.row
 					.col.s12.input-field
-						input#senha.required(type='password', name='senha')
+						input#senha(type='password')
 						label(for='senha') E senha
 						a.info(href='/ControleAcesso/Sessao/EnviarEmail') Esqueceu a senha?
 				
