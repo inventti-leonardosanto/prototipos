@@ -1,4 +1,5 @@
 import './scss/theme'
+import bg from './img/bg.jpg'
 import logo from './img/logo.png'
 
 $(function() {
