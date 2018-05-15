@@ -22,4 +22,6 @@ $(function() {
     $('.sidenav').sidenav({
         edge: 'right'
     });
+
+    $("#user-benefits").modal('open');
 });
