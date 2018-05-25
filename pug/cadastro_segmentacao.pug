@@ -5,55 +5,51 @@ block vars
 
 block content
 	.container
-		.card.horizontal
-			.card-stacked
-				.card-content.center
-					img.logo(src='../img/logo.png', alt='myrp')
-					h5 Crie sua conta
-					p
-						label Passo 1 de 3
+		.card.small-card
+			.card-content.center
+				img.logo(src='../img/logo.png', alt='myrp')
+				h5 Crie sua conta
+				p
+					label Passo 1 de 3
 
-					p Quais os segmentos da sua empresa?
-					.segmentos
-						.row
-							.col.s12
-								.nome.valign-wrapper
-									| Varejo
-									label.ml-auto
-										input.filled-in(type='checkbox')
-										span
-							.col.s12
-								.nome.valign-wrapper
-									| Atacado
-									label.ml-auto
-										input.filled-in(type='checkbox')
-										span
-							.col.s12
-								.nome.valign-wrapper
-									| Indústria
-									label.ml-auto
-										input.filled-in(type='checkbox')
-										span
-							.col.s12
-								.nome.valign-wrapper
-									| Serviços
-									label.ml-auto
-										input.filled-in(type='checkbox')
-										span
-							.col.s12
-								.nome.valign-wrapper
-									| Transporte
-									label.ml-auto
-										input.filled-in(type='checkbox')
-										span
+				p Quais os segmentos da sua empresa?
+				.segmentos
+					.row
+						.col.s12
+							.nome.valign-wrapper
+								| Varejo
+								label.ml-auto
+									input.filled-in(type='checkbox')
+									span
+						.col.s12
+							.nome.valign-wrapper
+								| Atacado
+								label.ml-auto
+									input.filled-in(type='checkbox')
+									span
+						.col.s12
+							.nome.valign-wrapper
+								| Indústria
+								label.ml-auto
+									input.filled-in(type='checkbox')
+									span
+						.col.s12
+							.nome.valign-wrapper
+								| Serviços
+								label.ml-auto
+									input.filled-in(type='checkbox')
+									span
+						.col.s12
+							.nome.valign-wrapper
+								| Transporte
+								label.ml-auto
+									input.filled-in(type='checkbox')
+									span
 
-					.fab-extended
-						a.btn-floating.btn-large.waves-effect.waves-light.blue(href='cadastro_identificacao.pug')
-							i.material-icons.left arrow_forward
-							|  Próximo
-			.card-image
-				a.modal-trigger(href='#video')
-					img(src='https://via.placeholder.com/320x600')
+				.fab-extended
+					a.btn-floating.btn-large.waves-effect.waves-light.blue(href='cadastro_identificacao.pug')
+						i.material-icons.left arrow_forward
+						|  Próximo
 		.row
 			.col.s12.center
 				a.white-text(href="index.pug", style="display:block;margin:3rem 0 0;text-decoration:underline;")

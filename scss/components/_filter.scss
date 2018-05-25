@@ -1,7 +1,8 @@
 .filter {
-  margin: auto;
+  margin: 10px auto;
   text-align: center;
   position: relative;
+  color: color("grey", "base");
   i {
     margin: 0 0.5rem;
     vertical-align: middle;
@@ -15,6 +16,7 @@
     font-size: 1.25rem;
     font-weight: 500;
     text-transform: initial;
+    color: color("grey", "darken-1");
     &:hover,
     &:focus {
       background-color: color("grey", "lighten-2");

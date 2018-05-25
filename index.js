@@ -23,5 +23,5 @@ $(function() {
         edge: 'right'
     });
 
-    $("#user-benefits").modal('open');
+    //$("#user-benefits").modal('open');
 });

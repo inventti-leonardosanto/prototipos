@@ -26,6 +26,7 @@
 
 // Pages
 @import "components/cadastro";
+@import "components/dashboard";
 
 * {
   outline: none;
@@ -49,9 +50,9 @@
   p {
     margin-bottom: 56px;
   }
-  .modal-content {
-    //padding: 24px 40px !important;
-  }
+  /*.modal-content {
+    padding: 24px 40px !important;
+  }*/
   .btn {
     font-weight: 500;
   }

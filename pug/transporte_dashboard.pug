@@ -1,0 +1,99 @@
+extends base/layout_completo.pug
+
+block vars
+	- var title = 'Resumo de transporte'
+
+block content
+
+	.container.dashboard
+		.filter
+			i.material-icons.circle keyboard_arrow_left
+			a.btn-flat.dropdown-trigger(href='#', data-target='filtros') Abril de 2018
+			i.material-icons.circle keyboard_arrow_right
+
+		.row
+			.col.s4
+				.card
+					.card-content
+						label Veículo mais utilizado
+						h5.truncate MUE-3100
+						label Quantidade
+						h5.truncate 290
+					.card-action.truncate
+						a.blue-text(href="!#") Ver relatório
+			.col.s4
+				.card
+					.card-content
+						label Motorista mais solicitado
+						h5.truncate Daiane Letícia da Rocha
+						label Quantidade
+						h5.truncate 35
+					.card-action.truncate
+						a.blue-text(href="!#") Ver relatório
+			.col.s4
+				.card
+					.card-content
+						label Total de frete
+						h5.truncate R$ 91.490,43
+						label Documentos emitidos
+						h5.truncate 99
+					.card-action.truncate
+						a.blue-text(href="!#", style="visibility:hidden;") Ver relatório
+		.row
+			.col.s12
+				.card
+					.card-content
+						p.center(style="margin-top:0; font-size: 18px;") Total de frete
+						div(style="min-height:300px;")
+					.card-action.truncate
+						a.blue-text(href="!#") Ver relatório
+
+			.col.s6
+				.card
+					.card-content
+						p.center(style="margin-top:0; font-size: 18px;") Top 10 placas mais utilizadas
+						div(style="min-height:300px;")
+					.card-action.truncate
+						a.blue-text(href="!#") Ver relatório
+
+			.col.s6
+				.card
+					.card-content
+						p.center(style="margin-top:0; font-size: 18px;") Top 10 motoristas mais solicitados
+						div(style="min-height:300px;")
+					.card-action.truncate
+						a.blue-text(href="!#") Ver relatório
+
+			.col.s6
+				.card
+					.card-content
+						p.center(style="margin-top:0; font-size: 18px;") Top 10 tomadores mais fiéis
+						div(style="min-height:300px;")
+					.card-action.truncate
+						a.blue-text(href="!#") Ver relatório
+
+			.col.s6
+				.card
+					.card-content
+						p.center(style="margin-top:0; font-size: 18px;") Top 10 destinos mais frequentes
+						div(style="min-height:300px;")
+					.card-action.truncate
+						a.blue-text(href="!#") Ver relatório
+
+
+	.fixed-action-btn
+		a.btn-floating.btn-large.waves-effect.waves-light
+			i.material-icons keyboard_arrow_up
+
+	ul#filtros.dropdown-content
+		li
+			a(href='#!') Este mês
+		li
+			a(href='#!') Mês passado
+		li
+			a(href='#!') Últimos 3 meses
+		li
+			a(href='#!') Escolher período
+
+
+

@@ -5,6 +5,12 @@
   background-size: cover;
   background-position: 50%;
 
+  .small-card {
+    width: 450px !important;
+    height: 600px;
+    margin: auto;
+  }
+
   .container {
     margin: 3.5% auto;
   }

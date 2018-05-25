@@ -5,12 +5,12 @@ block vars
 
 block content
 
-	.container
+	.container(style="max-width: 960px;")
 		.filter
-			span#select-all.legend Selecionar tudo
-			i.material-icons.grey-text.circle keyboard_arrow_left
-			a.btn-flat.grey-text.text-darken-2.dropdown-trigger(href='#', data-target='filtros') Abril de 2018
-			i.material-icons.grey-text.circle keyboard_arrow_right
+			span#select-all.legend Selecionar todos
+			i.material-icons.circle keyboard_arrow_left
+			a.btn-flat.dropdown-trigger(href='#', data-target='filtros') Abril de 2018
+			i.material-icons.circle keyboard_arrow_right
 
 		div(style='margin-top:15px').subtitle
 			span Hoje
@@ -36,8 +36,6 @@ block content
 									i.material-icons.grey-text.text-darken-2 edit
 								a.hide
 									i.material-icons.grey-text.text-darken-2 find_in_page
-								a.dropdown-trigger(href='#', data-target='dropdown1')
-									i.material-icons.grey-text.text-darken-2 more_vert
 						tr
 							td(width='60')
 								label
@@ -53,10 +51,6 @@ block content
 							td(width='100').right-align
 								a
 									i.material-icons.grey-text.text-darken-2 edit
-								a.hide
-									i.material-icons.grey-text.text-darken-2 find_in_page
-								a.dropdown-trigger(href='#', data-target='dropdown1')
-									i.material-icons.grey-text.text-darken-2 more_vert
 						tr
 							td
 								label
@@ -74,10 +68,6 @@ block content
 									i.file PDF
 								a
 									i.file XML
-								a.hide
-									i.material-icons.grey-text.text-darken-2 find_in_page
-								a.dropdown-trigger(href='#', data-target='dropdown2')
-									i.material-icons.grey-text.text-darken-2 more_vert
 
 		.subtitle
 			span 23 de abril
@@ -102,10 +92,6 @@ block content
 									i.file PDF
 								a
 									i.file XML
-								a.hide
-									i.material-icons.grey-text.text-darken-2 find_in_page
-								a.dropdown-trigger(href='#', data-target='dropdown2')
-									i.material-icons.grey-text.text-darken-2 more_vert
 						tr
 							td
 								label
@@ -123,10 +109,6 @@ block content
 									i.file PDF
 								a
 									i.file XML
-								a.hide
-									i.material-icons.grey-text.text-darken-2 find_in_page
-								a.dropdown-trigger(href='#', data-target='dropdown2')
-									i.material-icons.grey-text.text-darken-2 more_vert
 
 		.subtitle
 			span 19 de abril
@@ -151,10 +133,6 @@ block content
 									i.file PDF
 								a
 									i.file XML
-								a.hide
-									i.material-icons.grey-text.text-darken-2 find_in_page
-								a.dropdown-trigger(href='#', data-target='dropdown2')
-									i.material-icons.grey-text.text-darken-2 more_vert
 
 	ul#filtros.dropdown-content
 		li

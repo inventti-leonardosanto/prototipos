@@ -5,38 +5,34 @@ block vars
 
 block content
 	.container
-		.card.horizontal
-			.card-stacked
-				.card-content.center
-					a.back(href='cadastro_segmentacao.pug')
-						i.material-icons.left arrow_back
-					img.logo(src='../img/logo.png', alt='myrp')
-					h5 Crie sua conta
-					p
-						label Passo 2 de 3
+		.card.small-card
+			.card-content.center
+				a.back(href='cadastro_segmentacao.pug')
+					i.material-icons.left arrow_back
+				img.logo(src='../img/logo.png', alt='myrp')
+				h5 Crie sua conta
+				p
+					label Passo 2 de 3
 
-					p Fale sobre você
-					form
-						.row
-							.col.s12.input-field
-								input#cnpj(type='text', value='68.535.294/0001-90')
-								label(for='cnpj') CNPJ da empresa
-							.col.s12.input-field
-								input#email(type='text', value="leonardo.santo@inventti.com.br")
-								label(for='email') Qual é o seu e-mail?
-							.col.s12.input-field
-								input#senha(type='password')
-								label(for='senha') Defina uma senha de acesso
-							.col.s12.input-field
-								input#telefone(type='text', value='(47) 3036-7606')
-								label(for='telefone') Telefone
-					.fab-extended
-						a.btn-floating.btn-large.waves-effect.waves-light.blue(href='cadastro_cobranca.pug')
-							i.material-icons.left arrow_forward
-							|  Próximo
-			.card-image
-				a.modal-trigger(href='#video')
-					img(src='https://via.placeholder.com/320x600')
+				p Fale sobre você
+				form
+					.row
+						.col.s12.input-field
+							input#cnpj(type='text', value='68.535.294/0001-90')
+							label(for='cnpj') CNPJ da empresa
+						.col.s12.input-field
+							input#email(type='text', value="leonardo.santo@inventti.com.br")
+							label(for='email') Qual é o seu e-mail?
+						.col.s12.input-field
+							input#senha(type='password')
+							label(for='senha') Defina uma senha de acesso
+						.col.s12.input-field
+							input#telefone(type='text', value='(47) 3036-7606')
+							label(for='telefone') Telefone
+				.fab-extended
+					a.btn-floating.btn-large.waves-effect.waves-light.blue(href='cadastro_cobranca.pug')
+						i.material-icons.left arrow_forward
+						|  Próximo
 		.row
 			.col.s12.center
 				a.white-text(href="index.pug", style="display:block;margin:3rem 0 0;text-decoration:underline;")

@@ -5,57 +5,56 @@ block vars
 
 block content
 	.container
-		.card.horizontal
-			.card-stacked
-				.card-content.center
-					a.back(href='cadastro_identificacao.pug')
-						i.material-icons.left arrow_back
-					img.logo(src='../img/logo.png', alt='myrp')
-					h5 Crie sua conta
-					p
-						label Passo 3 de 3
+		.card
+			.card-content.center
+				a.back(href='cadastro_identificacao.pug')
+					i.material-icons.left arrow_back
+				img.logo(src='../img/logo.png', alt='myrp')
+				h5 Crie sua conta
+				p
+					label Passo 3 de 3
 
-					p Dados de cobrança
-					form
-						.row
-							.col.s6.input-field
-								input#nome(type='text')
-								label(for='nome') Nome do responsável
-							.col.s6.input-field
-								input#cpf(type='text')
-								label(for='cpf') CPF do responsável
-						.row
-							.col.s6.input-field
-								input#cep(type='text', value='89042-048')
-								label(for='cep') CEP
-						.row
-							.col.s6.input-field
-								input#logradouro(type='text', value='Rua Teodoro Sampaio')
-								label(for='logradouro') Logradouro
-							.col.s6.input-field
-								input#numero(type='text', value='162')
-								label(for='numero') Número
-						.row
-							.col.s6.input-field
-								input#complemento(type='text')
-								label(for='complemento') Complemento
-							.col.s6.input-field
-								input#bairro(type='text', value='Água Verde')
-								label(for='bairro') Bairro
-						.row
-							.col.s6.input-field
-								input#estado(type='text', value='Santa Catarina')
-								label(for='estado') Estado
-							.col.s6.input-field
-								input#pais(type='text', value='Blumenau')
-								label(for='pais') Município
-							
-						label Clicando em "Finalizar" você concorda com nossos 
-							a(href='#') termos de uso
-					.fab-extended
-						a.btn-floating.btn-large.waves-effect.waves-light.blue(href='dashboard.pug')
-							i.material-icons.left done
-							|  Finalizar
+				p Dados de cobrança
+				form
+					.row
+						.col.s6.input-field
+							input#nome(type='text')
+							label(for='nome') Nome do responsável
+						.col.s6.input-field
+							input#cpf(type='text')
+							label(for='cpf') CPF do responsável
+					.row
+						.col.s6.input-field
+							input#cep(type='text', value='89042-048')
+							label(for='cep') CEP
+					.row
+						.col.s6.input-field
+							input#logradouro(type='text', value='Rua Teodoro Sampaio')
+							label(for='logradouro') Logradouro
+						.col.s6.input-field
+							input#numero(type='text', value='162')
+							label(for='numero') Número
+					.row
+						.col.s6.input-field
+							input#complemento(type='text')
+							label(for='complemento') Complemento
+						.col.s6.input-field
+							input#bairro(type='text', value='Água Verde')
+							label(for='bairro') Bairro
+					.row
+						.col.s6.input-field
+							input#estado(type='text', value='Santa Catarina')
+							label(for='estado') Estado
+						.col.s6.input-field
+							input#pais(type='text', value='Blumenau')
+							label(for='pais') Município
+						
+					label Clicando em "Finalizar" você concorda com nossos 
+						a(href='#') termos de uso
+				.fab-extended
+					a.btn-floating.btn-large.waves-effect.waves-light.blue(href='dashboard.pug')
+						i.material-icons.left done
+						|  Finalizar
 							
 		.row
 			.col.s12.center
