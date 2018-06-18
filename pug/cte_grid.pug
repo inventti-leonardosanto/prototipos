@@ -19,55 +19,9 @@ block content
 			.card-content
 				table.highlight
 					tbody
-						tr
-							td(width='60')
-								label
-									input.filled-in(type='checkbox')
-									span
-							td(width='40')
-								.status.atencao.circle
-									i.material-icons priority_high
-							td
-								i.grey-text.text-lighten-1 Tomador não informado
-							td(width='100').center
-								| 
-							td(width='100').right-align
-								a
-									i.material-icons.grey-text.text-darken-2 edit
-								a.hide
-									i.material-icons.grey-text.text-darken-2 find_in_page
-						tr
-							td(width='60')
-								label
-									input.filled-in(type='checkbox')
-									span
-							td(width='40')
-								.status.atencao.circle
-									i.material-icons priority_high
-							td
-								| SHB Ind. e Com. Alimentos S.A.
-							td(width='100').center
-								| 
-							td(width='100').right-align
-								a
-									i.material-icons.grey-text.text-darken-2 edit
-						tr
-							td
-								label
-									input.filled-in(type='checkbox')
-									span
-							td
-								.status.sucesso.circle
-									i.material-icons done
-							td
-								| JBS S.A.
-							td.center
-								| 3 - 551
-							td.right-align
-								a
-									i.file PDF
-								a
-									i.file XML
+						+linhaAberto()
+						+linhaCritica('SHB Ind. e Com. Alimentos S.A.')
+						+linhaAutorizado('JBS S.A.', '3', '551')
 
 		.subtitle
 			span 23 de abril
@@ -75,40 +29,12 @@ block content
 			.card-content
 				table.highlight
 					tbody
-						tr
-							td(width='60')
-								label
-									input.filled-in(type='checkbox')
-									span
-							td(width='40')
-								.status.sucesso.circle
-									i.material-icons done
-							td
-								| Dalquim Ind. e Com. Ltda
-							td(width='100').center
-								| 4 - 301
-							td(width='100').right-align
-								a
-									i.file PDF
-								a
-									i.file XML
-						tr
-							td
-								label
-									input.filled-in(type='checkbox')
-									span
-							td
-								.status.sucesso.circle
-									i.material-icons done
-							td
-								| JBS S.A.
-							td.center
-								| 3 - 550
-							td.right-align
-								a
-									i.file PDF
-								a
-									i.file XML
+						+linhaAutorizado('Dalquim Ind. e Com. Ltda', '4', '301')
+						+linhaAutorizado('JBS S.A.', '3', '550')
+						+linhaAutorizado('JBS S.A.', '3', '549')
+						+linhaAutorizado('JBS S.A.', '3', '548')
+						+linhaAutorizado('JBS S.A.', '3', '547')
+						+linhaAutorizado('JBS S.A.', '3', '546')
 
 		.subtitle
 			span 19 de abril
@@ -116,23 +42,7 @@ block content
 			.card-content
 				table.highlight
 					tbody
-						tr
-							td(width='60')
-								label
-									input.filled-in(type='checkbox')
-									span
-							td(width='40')
-								.status.sucesso.circle
-									i.material-icons done
-							td
-								| Dalquim Ind. e Com. Ltda
-							td(width='100').center
-								| 4 - 300
-							td(width='100').right-align
-								a
-									i.file PDF
-								a
-									i.file XML
+						+linhaAutorizado('Dalquim Ind. e Com. Ltda', '4', '300')
 
 	ul#filtros.dropdown-content
 		li
@@ -170,3 +80,55 @@ block content
 				a.btn-floating.orange
 					i.material-icons refresh
 
+mixin linhaAberto
+	tr
+		td(width='60')
+			label
+				input.filled-in(type='checkbox')
+				span
+		td(width='40')
+			.status.edicao.circle
+				i.material-icons edit
+		td
+			i.grey-text.text-lighten-1 Tomador não informado
+		td(width='100').center
+			| 
+		td(width='120')
+			a
+				i.material-icons.right arrow_drop_down
+				| Editar
+
+mixin linhaCritica(tomador)
+	tr
+		td(width='60')
+			label
+				input.filled-in(type='checkbox')
+				span
+		td(width='40')
+			.status.atencao.circle
+				i.material-icons priority_high
+		td= tomador
+		td(width='100').center
+			| 
+		td(width='120')
+			a
+				i.material-icons.right arrow_drop_down
+				| Editar
+
+mixin linhaAutorizado(tomador, serie, numero)
+	tr
+		td(width='60')
+			label
+				input.filled-in(type='checkbox')
+				span
+		td(width='40')
+			.status.sucesso.circle
+				i.material-icons done
+		td= tomador
+		td(width='100').center
+			span= serie
+			| - 
+			span= numero
+		td(width='120')
+			a PDF
+			a XML
