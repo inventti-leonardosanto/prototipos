@@ -14,7 +14,6 @@ block content
 
 		div(style='margin-top:15px').subtitle
 			span Hoje
-			span.serie-numero Série - Nº
 		.card.card-grid
 			.card-content
 				table.highlight
@@ -92,11 +91,7 @@ mixin linhaAberto
 		td
 			i.grey-text.text-lighten-1 Tomador não informado
 		td(width='100').center
-			| 
-		td(width='120')
-			a
-				i.material-icons.right arrow_drop_down
-				| Editar
+		td(width='120').right-align
 
 mixin linhaCritica(tomador)
 	tr
@@ -109,11 +104,7 @@ mixin linhaCritica(tomador)
 				i.material-icons priority_high
 		td= tomador
 		td(width='100').center
-			| 
-		td(width='120')
-			a
-				i.material-icons.right arrow_drop_down
-				| Editar
+		td(width='120').right-align
 
 mixin linhaAutorizado(tomador, serie, numero)
 	tr
@@ -125,10 +116,10 @@ mixin linhaAutorizado(tomador, serie, numero)
 			.status.sucesso.circle
 				i.material-icons done
 		td= tomador
-		td(width='100').center
+		td(width='100').right-align
 			span= serie
-			| - 
+			|  - 
 			span= numero
-		td(width='120')
+		td(width='120').right-align
 			a PDF
 			a XML

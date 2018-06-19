@@ -1,0 +1,176 @@
+extends base/layout_completo.pug
+
+block vars
+	- var title = 'Notas fiscais'
+
+block content
+
+	.container
+		.filter
+			span#select-all.legend Selecionar todos
+			i.material-icons.circle keyboard_arrow_left
+			a.btn-flat.dropdown-trigger(href='#', data-target='filtros') Abril de 2018
+			i.material-icons.circle keyboard_arrow_right
+
+		div(style='margin-top:15px').subtitle
+			span Hoje
+		.card.card-grid
+			.card-content
+				table.highlight
+					tbody
+						+linhaAberto('Venda', '72,60')
+						+linhaCritica('Núcleo Indústria Têxtil Ltda', 'Venda', '298,00')
+						+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', '31,20', '1189')
+
+		.subtitle
+			span 23 de abril
+		.card.card-grid
+			.card-content
+				table.highlight
+					tbody
+						+linhaAutorizado('Dalquim Ind. e Com. Ltda', 'Remessa', '628,10', '1188')
+						+linhaAutorizado('JBS S.A.', 'Venda', '2.336,50', '1187')
+						+linhaAutorizado('JBS S.A.', 'Venda', '1.234,84', '1186')
+						+linhaAutorizado('JBS S.A.', 'Venda', '1.340,00', '1185')
+						+linhaAutorizado('JBS S.A.', 'Venda', '2.780,00', '1184')
+						+linhaAutorizado('JBS S.A.', 'Venda', '4.235,00', '1183')
+
+		.subtitle
+			span 19 de abril
+		.card.card-grid
+			.card-content
+				table.highlight
+					tbody
+						+linhaAutorizado('Dalquim Ind. e Com. Ltda', 'Remessa', '517,50', '1182')
+						+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', '43,80', '1181')
+						+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', '41,80', '1180')
+						+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', '54,00', '1179')
+						+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', '78,00', '1178')
+						+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', '21,11', '1177')
+						+linhaAutorizado('JBS S.A.', 'Venda', '2.780,00', '1176')
+						+linhaAutorizado('JBS S.A.', 'Venda', '2.780,00', '1175')
+						+linhaAutorizado('Núcleo Indústria Têxtil Ltda', 'Venda', '13,00', '1174')
+	ul#filtros.dropdown-content
+		li
+			a(href='#!') Este mês
+		li
+			a(href='#!') Mês passado
+		li
+			a(href='#!') Últimos 3 meses
+		li
+			a(href='#!') Escolher período
+
+	ul#dropdown1.dropdown-content
+		li
+			a(href='#!') Emitir
+		li
+			a(href='#!') Visualizar
+
+	ul#dropdown2.dropdown-content
+		li
+			a(href='#!') Cancelar
+		li
+			a(href='#!') Redistribuir
+		li
+			a(href='#!') Carta de correção
+
+
+	.fixed-action-btn
+		a.btn-floating.btn-large.waves-effect.waves-light
+			i.material-icons add
+		ul.hide
+			li
+				a.btn-floating.orange
+					i.material-icons search
+			li
+				a.btn-floating.orange
+					i.material-icons refresh
+
+
+	#detalhes.sidenav(style='width: 600px;')
+		h5
+			| Núcleo Indústria Têxtil Ltda
+			.chip.numero NF 1174
+
+		.section
+			.row
+				.col.s6
+					label CNPJ
+					div 03.265.874/0001-69 
+				.col.s6
+					label Natureza da operação
+					div Venda
+
+		.section
+			table
+				thead
+					tr
+						th Produto
+						th.right-align Valor (R$)
+				tbody
+					tr
+						td
+							| Caneta esferográfica 
+							label.grey-text (1 UN x 5,50)
+						td.right-align 5,50
+					tr
+						td
+							| Lápis 
+							label.grey-text (5 UN x 1,50)
+						td.right-align 7,50
+				tfoot
+					tr
+						td(colspan='2')
+							h5.right-align
+								small 13,00
+
+		
+
+mixin linhaAberto(tipo, valor)
+	tr.sidenav-trigger(href='#', data-target='detalhes')
+		td(width='60')
+			label
+				input.filled-in(type='checkbox')
+				span
+		td(width='40')
+			.status.edicao.circle
+				i.material-icons edit
+		td
+			span.grey-text Cliente não informado
+		td(width='80').center-align.grey-text= tipo
+		td(width='120').right-align= valor
+		td(width='100').right-align
+		td(width='120').right-align
+
+mixin linhaCritica(cliente, tipo, valor)
+	tr.sidenav-trigger(href='#', data-target='detalhes')
+		td(width='60')
+			label
+				input.filled-in(type='checkbox')
+				span
+		td(width='40')
+			.status.atencao.circle
+				i.material-icons priority_high
+		td= cliente
+		td(width='80').center-align.grey-text= tipo
+		td(width='120').right-align= valor
+		td(width='100').right-align
+		td(width='120').right-align
+
+mixin linhaAutorizado(cliente, tipo, valor, numero)
+	tr.sidenav-trigger(href='#', data-target='detalhes')
+		td(width='60')
+			label
+				input.filled-in(type='checkbox')
+				span
+		td(width='40')
+			.status.sucesso.circle
+				i.material-icons done
+		td= cliente
+		td(width='80').center-align.grey-text= tipo
+		td(width='120').right-align= valor
+		td(width='100').right-align= numero
+		td(width='120').right-align
+			a PDF
+			a XML
+
