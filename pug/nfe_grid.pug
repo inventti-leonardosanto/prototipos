@@ -143,11 +143,10 @@ mixin linhaAberto(tipo, valor)
 		td(width='40')
 			.status.edicao.circle
 				i.material-icons edit
-		td
-			span.grey-text Cliente não informado
+		td.grey-text Cliente não informado
 		td(width='80').center-align.grey-text= tipo
 		td(width='120').right-align= valor
-		td(width='80').right-align
+		td(width='80').right-align.grey-text S / N
 		td(width='120').right-align
 			i.material-icons edit
 
@@ -163,7 +162,7 @@ mixin linhaCritica(cliente, tipo, valor)
 		td= cliente
 		td(width='80').center-align.grey-text= tipo
 		td(width='120').right-align= valor
-		td(width='80').right-align
+		td(width='80').right-align.grey-text S / N
 		td(width='120').right-align
 			i.material-icons edit
 
