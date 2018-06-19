@@ -56,13 +56,13 @@ block content
 						+linhaAutorizado('Núcleo Indústria Têxtil Ltda', 'Venda', 'R$ 13,00', '1174')
 	ul#filtros.dropdown-content
 		li
-			a(href='#!') Semana passada
+			a(href='nfe_grid.pug') Esta semana
 		li
 			a(href='#!') Este mês
 		li
-			a(href='#!') Mês passado
+			a(href='nfe_empty.pug') Mês passado
 		li
-			a(href='#!') Escolher período
+			a(href='nfe_grid.pug') Escolher período
 
 	ul#notas-fiscais.dropdown-content
 		li
@@ -118,17 +118,15 @@ block content
 					tr
 						td(colspan='2')
 							h5.right-align
-								small 13,00
-
-		
-		.row
+								small 13,00		
+		.row(style='margin-bottom:1rem;')
 			.col.s4
 				a.btn-block.btn-flat.blue.lighten-5.blue-text Emitir
 			.col.s4
 				a.btn-block.btn-flat.blue.lighten-5.blue-text Reprocessar
 			.col.s4
 				a.btn-block.btn-flat.blue.lighten-5.blue-text Cancelar
-		.row(style='margin-top:1rem;')
+		.row
 			.col.s4
 				a.btn-block.btn-flat.blue.lighten-5.blue-text Devolver
 			.col.s4
