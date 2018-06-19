@@ -22,4 +22,12 @@
       background-color: color("grey", "lighten-2");
     }
   }
+  .actions-right {
+    position: absolute;
+    right: 0;
+    i {
+      font-size: 24px;
+      padding: 5px;
+    }
+  }
 }

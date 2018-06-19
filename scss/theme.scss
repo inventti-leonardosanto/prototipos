@@ -53,9 +53,6 @@
   /*.modal-content {
     padding: 24px 40px !important;
   }*/
-  .btn {
-    font-weight: 500;
-  }
   .btn-floating {
     position: absolute;
     top: 0;
@@ -68,4 +65,15 @@
       right: -88px;
     }
   }
+}
+
+
+.btn,
+.btn-flat {
+  font-weight: 500;
+}
+
+.btn-block {
+  display: block;
+  text-align: center;
 }
