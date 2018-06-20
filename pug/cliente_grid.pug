@@ -8,7 +8,7 @@ block content
 
 	.container
 		+fab()
-		+topoLista('19–25 de Abril, 2018')
+		+topoLista()
 
 		.heading(style='margin-top:15px')
 		+cardGrid()
@@ -24,6 +24,5 @@ mixin linha(cliente, tipo, endereco)
 		td= cliente
 		td= tipo
 		td.col-descricao= endereco
-		td.col-numero
 		+colunaAcoes()
 
