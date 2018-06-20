@@ -77,3 +77,10 @@
   display: block;
   text-align: center;
 }
+
+
+.acoes-detalhes {
+  position: absolute;
+  width: calc(100% - 60px);
+  bottom: 90px;
+}

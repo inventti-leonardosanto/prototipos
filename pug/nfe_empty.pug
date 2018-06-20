@@ -1,4 +1,5 @@
 extends base/layout_completo.pug
+include base/mixins.pug
 
 block vars
 	- var title = 'Notas fiscais'
@@ -6,43 +7,15 @@ block vars
 block content
 
 	.container
-		.filter
-			span#select-all.legend.hide Selecionar todos
-			i.material-icons.circle keyboard_arrow_left
-			a.btn-flat.dropdown-trigger(href='#', data-target='filtros') Março de 2018
-			i.material-icons.circle keyboard_arrow_right
-			span.actions-right
-				i.material-icons.circle search
-				i.material-icons.circle refresh
+		+fab()
+		+topoLista()
 
 		.card-panel(style="margin-top: 30px;")
 			.section
 				h5.center.grey-text
 					small Não há documentos nesse período.
-
 			.section.center
 				a.btn Criar nota fiscal
-
-	ul#filtros.dropdown-content
-		li
-			a(href='nfe_grid.pug') Esta semana
-		li
-			a(href='#!') Este mês
-		li
-			a(href='nfe_empty.pug') Mês passado
-		li
-			a(href='nfe_grid.pug') Escolher período
-
-	.fixed-action-btn
-		a.btn-floating.btn-large.waves-effect.waves-light.dropdown-trigger(href='#', data-target='notas-fiscais')
-			i.material-icons add
-		ul.hide
-			li
-				a.btn-floating.orange
-					i.material-icons search
-			li
-				a.btn-floating.orange
-					i.material-icons refresh
 
 
 	

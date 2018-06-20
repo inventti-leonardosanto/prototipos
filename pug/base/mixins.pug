@@ -1,0 +1,42 @@
+mixin topoLista()
+	.card.card-input.campo-pesquisa.hide
+		input#first_name(placeholder='Pesquise por blá blá blá', type='text')
+		i.material-icons.grey-text.pesquisar search
+
+	.filter
+		span.selecionar-tudo Selecionar todos
+		i.material-icons.circle keyboard_arrow_left
+		a.btn-flat.dropdown-trigger(href='#', data-target='filtros') 19–25 de Abril, 2018
+		i.material-icons.circle keyboard_arrow_right
+		span.actions-right
+			i.material-icons.circle refresh
+			i.material-icons.circle.mostrar-pesquisa search
+
+	ul#filtros.dropdown-content
+		li
+			a(href='nfe_grid.pug') Esta semana
+		li
+			a(href='#!') Este mês
+		li
+			a(href='nfe_empty.pug') Mês passado
+		li
+			a(href='nfe_grid.pug') Escolher período
+
+mixin cardGridHeading(data)
+	.heading
+		span= data
+		if block
+			block
+
+mixin cardGrid(data)
+	.card.card-grid
+		.card-content
+			table.highlight
+				tbody
+					if block
+						block
+
+mixin fab()
+	.fixed-action-btn
+		a.btn-floating.btn-large
+			i.material-icons add

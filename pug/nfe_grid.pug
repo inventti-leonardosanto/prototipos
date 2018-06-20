@@ -1,4 +1,5 @@
 extends base/layout_completo.pug
+include base/mixins.pug
 
 block vars
 	- var title = 'Notas fiscais'
@@ -6,82 +7,37 @@ block vars
 block content
 
 	.container
-		.filter
-			span#select-all.legend Selecionar todos
-			i.material-icons.circle keyboard_arrow_left
-			a.btn-flat.dropdown-trigger(href='#', data-target='filtros') 19–25 de Abril, 2018
-			i.material-icons.circle keyboard_arrow_right
-			span.actions-right
-				i.material-icons.circle search
-				i.material-icons.circle refresh
+		+fab()
+		+topoLista()
 
-		div(style='margin-top:15px').subtitle
+		.heading(style='margin-top:15px')
 			span Hoje
 			span.serie-numero NF
-		.card.card-grid
-			.card-content
-				table.highlight
-					tbody
-						+linhaAberto('Venda', 'R$ 72,60')
-						+linhaCritica('Núcleo Indústria Têxtil Ltda', 'Venda', 'R$ 298,00')
-						+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', 'R$ 31,20', '1189')
+		+cardGrid()
+			+linhaAberto('Venda', 'R$ 72,60')
+			+linhaCritica('Núcleo Indústria Têxtil Ltda', 'Venda', 'R$ 298,00')
+			+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', 'R$ 31,20', '1189')
 
-		.subtitle
-			span 23 de abril
-		.card.card-grid
-			.card-content
-				table.highlight
-					tbody
-						+linhaAutorizado('Dalquim Ind. e Com. Ltda', 'Remessa', 'R$ 628,10', '1188')
-						+linhaAutorizado('JBS S.A.', 'Venda', 'R$ 2.336,50', '1187')
-						+linhaAutorizado('JBS S.A.', 'Venda', 'R$ 1.234,84', '1186')
-						+linhaAutorizado('JBS S.A.', 'Venda', 'R$ 1.340,00', '1185')
-						+linhaAutorizado('JBS S.A.', 'Venda', 'R$ 2.780,00', '1184')
-						+linhaAutorizado('JBS S.A.', 'Venda', 'R$ 4.235,00', '1183')
+		+cardGridHeading('23 de abril')
+		+cardGrid()
+			+linhaAutorizado('Dalquim Ind. e Com. Ltda', 'Remessa', 'R$ 628,10', '1188')
+			+linhaAutorizado('JBS S.A.', 'Venda', 'R$ 2.336,50', '1187')
+			+linhaAutorizado('JBS S.A.', 'Venda', 'R$ 1.234,84', '1186')
+			+linhaAutorizado('JBS S.A.', 'Venda', 'R$ 1.340,00', '1185')
+			+linhaAutorizado('JBS S.A.', 'Venda', 'R$ 2.780,00', '1184')
+			+linhaAutorizado('JBS S.A.', 'Venda', 'R$ 4.235,00', '1183')
 
-		.subtitle
-			span 19 de abril
-		.card.card-grid
-			.card-content
-				table.highlight
-					tbody
-						+linhaAutorizado('Dalquim Ind. e Com. Ltda', 'Remessa', 'R$ 517,50', '1182')
-						+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', 'R$ 43,80', '1181')
-						+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', 'R$ 41,80', '1180')
-						+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', 'R$ 54,00', '1179')
-						+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', 'R$ 78,00', '1178')
-						+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', 'R$ 21,11', '1177')
-						+linhaAutorizado('JBS S.A.', 'Venda', 'R$ 2.780,00', '1176')
-						+linhaAutorizado('JBS S.A.', 'Venda', 'R$ 2.780,00', '1175')
-						+linhaAutorizado('Núcleo Indústria Têxtil Ltda', 'Venda', 'R$ 13,00', '1174')
-	ul#filtros.dropdown-content
-		li
-			a(href='nfe_grid.pug') Esta semana
-		li
-			a(href='#!') Este mês
-		li
-			a(href='nfe_empty.pug') Mês passado
-		li
-			a(href='nfe_grid.pug') Escolher período
-
-	ul#notas-fiscais.dropdown-content
-		li
-			a(href='#!') Venda
-		li
-			a(href='#!') Remessa
-
-
-	.fixed-action-btn
-		a.btn-floating.btn-large.waves-effect.waves-light.dropdown-trigger(href='#', data-target='notas-fiscais')
-			i.material-icons add
-		ul.hide
-			li
-				a.btn-floating.orange
-					i.material-icons search
-			li
-				a.btn-floating.orange
-					i.material-icons refresh
-
+		+cardGridHeading('19 de abril')
+		+cardGrid()
+			+linhaAutorizado('Dalquim Ind. e Com. Ltda', 'Remessa', 'R$ 517,50', '1182')
+			+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', 'R$ 43,80', '1181')
+			+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', 'R$ 41,80', '1180')
+			+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', 'R$ 54,00', '1179')
+			+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', 'R$ 78,00', '1178')
+			+linhaAutorizado('Fernanda Roberta da Silva ME', 'Venda', 'R$ 21,11', '1177')
+			+linhaAutorizado('JBS S.A.', 'Venda', 'R$ 2.780,00', '1176')
+			+linhaAutorizado('JBS S.A.', 'Venda', 'R$ 2.780,00', '1175')
+			+linhaAutorizado('Núcleo Indústria Têxtil Ltda', 'Venda', 'R$ 13,00', '1174')
 
 	#detalhes.sidenav(style='width: 600px;')
 		h5
@@ -118,68 +74,76 @@ block content
 					tr
 						td(colspan='2')
 							h5.right-align
-								small 13,00		
-		.row(style='margin-bottom:1rem;')
-			.col.s4
-				a.btn-block.btn-flat.blue.lighten-5.blue-text Emitir
-			.col.s4
-				a.btn-block.btn-flat.blue.lighten-5.blue-text Reprocessar
-			.col.s4
-				a.btn-block.btn-flat.blue.lighten-5.blue-text Cancelar
-		.row
-			.col.s4
-				a.btn-block.btn-flat.blue.lighten-5.blue-text Devolver
-			.col.s4
-				a.btn-block.btn-flat.blue.lighten-5.blue-text Retornar
-			.col.s4
-				a.btn-block.btn-flat.blue.lighten-5.blue-text Ver financeiro
+								small 13,00
+
+		.acoes-detalhes
+			.row(style='margin-bottom:1rem;').hide
+				.col.s4
+					a.btn-block.btn-flat.blue.lighten-5.blue-text Emitir
+				.col.s4
+					a.btn-block.btn-flat.blue.lighten-5.blue-text Reprocessar
+				.col.s4
+					a.btn-block.btn-flat.blue.lighten-5.blue-text Cancelar
+			.row
+				.col.s4
+					a.btn-block.btn-flat.blue.lighten-5.blue-text Devolver
+				.col.s4
+					a.btn-block.btn-flat.blue.lighten-5.blue-text Retornar
+				.col.s4
+					a.btn-block.btn-flat.blue.lighten-5.blue-text Ver financeiro
 
 mixin linhaAberto(tipo, valor)
 	tr.sidenav-trigger(href='#', data-target='detalhes')
-		td(width='60')
+		td(width='40')
 			label
 				input.filled-in(type='checkbox')
 				span
 		td(width='40')
 			.status.edicao.circle
 				i.material-icons edit
+
 		td.grey-text Cliente não informado
-		td(width='80').center-align.grey-text= tipo
+		td(width='70').left-align
+			label.tipo= tipo
 		td(width='120').right-align= valor
-		td(width='80').right-align.grey-text S / N
-		td(width='120').right-align
+		td(width='100').center-align
+		td(width='105').right-align
 			i.material-icons edit
 
 mixin linhaCritica(cliente, tipo, valor)
 	tr.sidenav-trigger(href='#', data-target='detalhes')
-		td(width='60')
+		td(width='40')
 			label
 				input.filled-in(type='checkbox')
 				span
 		td(width='40')
 			.status.atencao.circle
 				i.material-icons priority_high
+				
 		td= cliente
-		td(width='80').center-align.grey-text= tipo
+		td(width='70').left-align
+			label.tipo= tipo
 		td(width='120').right-align= valor
-		td(width='80').right-align.grey-text S / N
-		td(width='120').right-align
+		td(width='100').center-align
+		td(width='105').right-align
 			i.material-icons edit
 
 mixin linhaAutorizado(cliente, tipo, valor, numero)
 	tr.sidenav-trigger(href='#', data-target='detalhes')
-		td(width='60')
+		td(width='40')
 			label
 				input.filled-in(type='checkbox')
 				span
 		td(width='40')
 			.status.sucesso.circle
 				i.material-icons done
+
 		td= cliente
-		td(width='80').center-align.grey-text= tipo
+		td(width='70').left-align
+			label.tipo= tipo
 		td(width='120').right-align= valor
-		td(width='80').right-align= numero
-		td(width='120').right-align
+		td(width='100').center-align= numero
+		td(width='105').right-align
 			a(href='#') PDF
 			a(href='#') XML
 

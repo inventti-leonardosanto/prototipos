@@ -49,6 +49,10 @@ table {
     margin-left: 10px;
   }
 
+  label.tipo {
+    margin: 0 5px;
+  }
+
   .status {
     width: 20px;
     height: 20px;
@@ -81,18 +85,18 @@ table {
   }  
 }
 
-.subtitle {
+.heading {
   color: color("grey", "darken-1");
   font-size: 14px;
   margin: 30px 25px 10px;
   position: relative;
   .serie-numero {
     position: absolute;
-    right: 120px;
+    right: 130px;
   }
 }
 
-.legend {
+.selecionar-tudo {
   color: color("grey", "darken-1");
   font-size: 14px;
   position: absolute;
@@ -103,14 +107,6 @@ table {
   background-color: color("grey", "lighten-3");
   cursor: pointer;
 }
-
-.icon {
-  font-size: 17px;
-  margin: 3px;
-  vertical-align: bottom;
-  line-height: 12px;
-}
-
 
 .chip {
   &.numero {

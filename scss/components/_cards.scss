@@ -1,6 +1,6 @@
 .card,
 .card-panel {
-	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
 .card-panel {
@@ -13,5 +13,28 @@
 	.card-content {
 		padding: 10px;
 		border-radius: 4px;
+	}
+}
+
+.card-input {
+	margin: 0;
+	height: 50px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+	input[type="text"]:not(.browser-default) {
+		height: 48px;
+		padding: 0 16px;
+		margin-bottom: 0;
+		border-bottom: none;
+		width: calc(100% - 72px);
+	}
+	input[type=text]:not(.browser-default):focus:not([readonly]) {
+		border-bottom: none;
+		box-shadow: none;
+	}
+	i {
+		line-height: 50px;
+		vertical-align: top;
+		margin-right: 8px;
+		cursor: pointer;
 	}
 }
