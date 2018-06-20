@@ -8,7 +8,7 @@ block content
 
 	.container
 		+fab()
-		+topoLista()
+		+topoLista('19–25 de Abril, 2018')
 
 		.heading(style='margin-top:15px')
 			span Hoje
@@ -94,56 +94,34 @@ block content
 
 mixin linhaAberto(tipo, valor)
 	tr.sidenav-trigger(href='#', data-target='detalhes')
-		td(width='40')
-			label
-				input.filled-in(type='checkbox')
-				span
-		td(width='40')
-			.status.edicao.circle
-				i.material-icons edit
-
+		+colunaCheckbox()
+		+colunaAberto()
 		td.grey-text Cliente não informado
-		td(width='70').left-align
+		td.col-tipo
 			label.tipo= tipo
-		td(width='120').right-align= valor
-		td(width='100').center-align
-		td(width='105').right-align
-			i.material-icons edit
+		td.col-valor= valor
+		td.col-numero
+		+colunaAcoes()
 
 mixin linhaCritica(cliente, tipo, valor)
 	tr.sidenav-trigger(href='#', data-target='detalhes')
-		td(width='40')
-			label
-				input.filled-in(type='checkbox')
-				span
-		td(width='40')
-			.status.atencao.circle
-				i.material-icons priority_high
-				
+		+colunaCheckbox()
+		+colunaCritica()
 		td= cliente
-		td(width='70').left-align
+		td.col-tipo
 			label.tipo= tipo
-		td(width='120').right-align= valor
-		td(width='100').center-align
-		td(width='105').right-align
-			i.material-icons edit
+		td.col-valor= valor
+		td.col-numero
+		+colunaAcoes()
 
 mixin linhaAutorizado(cliente, tipo, valor, numero)
 	tr.sidenav-trigger(href='#', data-target='detalhes')
-		td(width='40')
-			label
-				input.filled-in(type='checkbox')
-				span
-		td(width='40')
-			.status.sucesso.circle
-				i.material-icons done
-
+		+colunaCheckbox()
+		+colunaAutorizado()
 		td= cliente
-		td(width='70').left-align
+		td.col-tipo
 			label.tipo= tipo
-		td(width='120').right-align= valor
-		td(width='100').center-align= numero
-		td(width='105').right-align
-			a(href='#') PDF
-			a(href='#') XML
+		td.col-valor= valor
+		td.col-numero= numero
+		+colunaDownload()
 

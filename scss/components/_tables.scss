@@ -1,116 +1,139 @@
 table {
-  font-size: 15px;
-
-  thead {
-    tr {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-      th {
-        font-weight: 500;
-      }
-    }
+	font-size: 15px;
+	thead {
+		tr {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+			th {
+				font-weight: 500;
+			}
+		}
+	}
+	tbody {
+		tr {
+			border: none;
+			cursor: pointer;
+		}
+		td {
+			padding: 13px 5px;
+		}
+	}
+	tfoot {
+		tr {
+			border-top: 2px solid rgba(0, 0, 0, 0.12);
+			border-bottom: none;
+		}
   }
-
-  tbody {
-    tr {
-      border: none;
-      cursor: pointer;
-    }
-    td {
-      padding: 13px 5px;
-    }
+  
+	/* colunas */
+	td {
+		&.col-check,
+		&.col-status {
+			width: 40px;
+		}
+		&.col-numero {
+			width: 100px;
+			text-align: center;
+		}
+		&.col-valor {
+			width: 120px;
+			text-align: right;
+		}
+		&.col-tipo {
+			width: 70px;
+			text-align: left;
+		}
+		&.col-acoes {
+			width: 105px;
+			text-align: right;
+		}
   }
-
-  tfoot {
-    tr {
-      border-top: 2px solid rgba(0, 0, 0, 0.12);
-      border-bottom: none;
-    }
+  
+	h5 {
+		margin: 0;
   }
-
-  h5 {
-    margin: 0;
-  }
-
-  a {
-    display: inline-block;
-    padding: 0 5px;
-    margin: 0 5px;
-    line-height: 24px;
-    text-transform: uppercase;
-    font-size: 13px;
-    color: color("blue", "base");
-    background: color("blue", "lighten-5");
-    font-weight: 500;
-    border-radius: 2px;
-  }
-
-  [type="checkbox"] + span:not(.lever) {
-    height: 20px;
-    margin-left: 10px;
-  }
-
-  label.tipo {
-    margin: 0 5px;
-  }
-
-  .status {
-    width: 20px;
-    height: 20px;
-    &.edicao,
-    &.atencao,
-    &.sucesso {
-      text-align: center;
-      i {
-        margin: auto;
-        font-size: 14px;
-        line-height: 20px;
-        color: white;
-      }
-    }
-    &.edicao {
-      background-color: color("cyan", "base");
-    }
-    &.atencao {
-      background-color: color("orange", "base");
-    }
-    &.sucesso {
-      background-color: color("light-green", "base");
-    }
+  
+	a {
+		display: inline-block;
+		padding: 0 5px;
+		margin: 0 5px;
+		line-height: 24px;
+		text-transform: uppercase;
+		font-size: 13px;
+		color: color("blue", "base");
+		background: color("blue", "lighten-5");
+		font-weight: 500;
+		border-radius: 2px;
   }
 
   i {
-    color: color("grey", "base");
-    cursor: pointer;
-    margin: 0 10px;    
-  }  
+		color: color("grey", "base");
+		cursor: pointer;
+		margin: 0 10px;
+	}
+  
+	[type="checkbox"]+span:not(.lever) {
+		height: 20px;
+		margin-left: 10px;
+  }
+  
+  label {
+    &.tipo {
+		  margin: 0 5px;
+    }
+  }
+  
+	.status {
+		width: 20px;
+		height: 20px;
+		&.edicao,
+		&.atencao,
+		&.sucesso {
+			text-align: center;
+			i {
+				margin: auto;
+				font-size: 14px;
+				line-height: 20px;
+				color: white;
+			}
+		}
+		&.edicao {
+			background-color: color("cyan", "base");
+		}
+		&.atencao {
+			background-color: color("orange", "base");
+		}
+		&.sucesso {
+			background-color: color("light-green", "base");
+		}
+  }
 }
 
 .heading {
-  color: color("grey", "darken-1");
-  font-size: 14px;
-  margin: 30px 25px 10px;
-  position: relative;
-  .serie-numero {
-    position: absolute;
-    right: 130px;
-  }
+	color: color("grey", "darken-1");
+	font-size: 14px;
+	margin: 30px 25px 10px;
+	position: relative;
+	.serie-numero {
+		position: absolute;
+		right: 130px;
+	}
 }
 
 .selecionar-tudo {
-  color: color("grey", "darken-1");
-  font-size: 14px;
-  position: absolute;
-  left: 15px;
-  margin-top: 2px;
-  padding: 5px 10px;
-  border-radius: 36px;
-  background-color: color("grey", "lighten-3");
-  cursor: pointer;
+	color: color("grey", "darken-1");
+	font-size: 14px;
+	position: absolute;
+	left: 15px;
+	margin-top: 2px;
+	padding: 5px 10px;
+	border-radius: 36px;
+	background-color: color("grey", "lighten-3");
+	cursor: pointer;
 }
 
 .chip {
-  &.numero {
-    vertical-align: top;
-    margin: -5px 10px 0;
-  }
+	&.numero {
+		vertical-align: top;
+		margin: -5px 10px 0;
+	}
 }

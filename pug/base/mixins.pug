@@ -1,13 +1,14 @@
-mixin topoLista()
+mixin topoLista(periodo)
 	.card.card-input.campo-pesquisa.hide
-		input#first_name(placeholder='Pesquise por blá blá blá', type='text')
+		input#first_name(placeholder='Pesquise pelo cliente', type='text')
 		i.material-icons.grey-text.pesquisar search
 
 	.filter
 		span.selecionar-tudo Selecionar todos
-		i.material-icons.circle keyboard_arrow_left
-		a.btn-flat.dropdown-trigger(href='#', data-target='filtros') 19–25 de Abril, 2018
-		i.material-icons.circle keyboard_arrow_right
+		if periodo
+			i.material-icons.circle keyboard_arrow_left
+			a.btn-flat.dropdown-trigger(href='#', data-target='filtros')= periodo
+			i.material-icons.circle keyboard_arrow_right
 		span.actions-right
 			i.material-icons.circle refresh
 			i.material-icons.circle.mostrar-pesquisa search
@@ -35,6 +36,36 @@ mixin cardGrid(data)
 				tbody
 					if block
 						block
+
+mixin colunaCheckbox()
+	td.col-check
+		label
+			input.filled-in(type='checkbox')
+			span
+
+mixin colunaAberto()
+	td.col-status
+		.status.edicao.circle
+			i.material-icons edit
+
+mixin colunaCritica()
+	td.col-status
+		.status.atencao.circle
+			i.material-icons priority_high
+
+mixin colunaAutorizado()
+	td.col-status
+		.status.sucesso.circle
+			i.material-icons done
+
+mixin colunaAcoes()
+	td.col-acoes
+		i.material-icons edit
+
+mixin colunaDownload()
+	td.col-acoes
+		a(href='#') PDF
+		a(href='#') XML
 
 mixin fab()
 	.fixed-action-btn

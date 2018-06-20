@@ -8,7 +8,7 @@ block content
 
 	.container
 		+fab()
-		+topoLista()
+		+topoLista('19–25 de Abril, 2018')
 
 		.heading(style='margin-top:15px')
 			span Hoje
@@ -32,45 +32,27 @@ block content
 
 mixin linhaAberto
 	tr
-		td(width='60')
-			label
-				input.filled-in(type='checkbox')
-				span
-		td(width='40')
-			.status.edicao.circle
-				i.material-icons edit
-		td
-			i.grey-text.text-lighten-1 Tomador não informado
-		td(width='100').center
-		td(width='120').right-align
+		+colunaCheckbox()
+		+colunaAberto()
+		td.grey-text Tomador não informado
+		td.col-numero
+		+colunaAcoes()
 
 mixin linhaCritica(tomador)
 	tr
-		td(width='60')
-			label
-				input.filled-in(type='checkbox')
-				span
-		td(width='40')
-			.status.atencao.circle
-				i.material-icons priority_high
+		+colunaCheckbox()
+		+colunaCritica()
 		td= tomador
-		td(width='100').center
-		td(width='120').right-align
+		td.col-numero
+		+colunaAcoes()
 
 mixin linhaAutorizado(tomador, serie, numero)
 	tr
-		td(width='60')
-			label
-				input.filled-in(type='checkbox')
-				span
-		td(width='40')
-			.status.sucesso.circle
-				i.material-icons done
+		+colunaCheckbox()
+		+colunaAutorizado()
 		td= tomador
-		td(width='100').right-align
+		td.col-numero
 			span= serie
 			|  - 
 			span= numero
-		td(width='120').right-align
-			a PDF
-			a XML
+		+colunaDownload()
