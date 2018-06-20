@@ -22,13 +22,15 @@ table {
 			border-top: 2px solid rgba(0, 0, 0, 0.12);
 			border-bottom: none;
 		}
-  }
-  
+	}
 	/* colunas */
 	td {
 		&.col-check,
 		&.col-status {
 			width: 40px;
+		}
+		&.col-descricao {
+			width: 150px;
 		}
 		&.col-numero {
 			width: 100px;
@@ -40,18 +42,15 @@ table {
 		}
 		&.col-tipo {
 			width: 70px;
-			text-align: left;
 		}
 		&.col-acoes {
 			width: 105px;
 			text-align: right;
 		}
-  }
-  
+	}
 	h5 {
 		margin: 0;
-  }
-  
+	}
 	a {
 		display: inline-block;
 		padding: 0 5px;
@@ -63,25 +62,21 @@ table {
 		background: color("blue", "lighten-5");
 		font-weight: 500;
 		border-radius: 2px;
-  }
-
-  i {
+	}
+	i {
 		color: color("grey", "base");
 		cursor: pointer;
 		margin: 0 10px;
 	}
-  
 	[type="checkbox"]+span:not(.lever) {
 		height: 20px;
 		margin-left: 10px;
-  }
-  
-  label {
-    &.tipo {
-		  margin: 0 5px;
-    }
-  }
-  
+	}
+	label {
+		&.tipo {
+			margin: 0 5px;
+		}
+	}
 	.status {
 		width: 20px;
 		height: 20px;
@@ -105,7 +100,7 @@ table {
 		&.sucesso {
 			background-color: color("light-green", "base");
 		}
-  }
+	}
 }
 
 .heading {

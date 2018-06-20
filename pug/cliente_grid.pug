@@ -1,0 +1,29 @@
+extends base/layout_completo.pug
+include base/mixins.pug
+
+block vars
+	- var title = 'Clientes'
+
+block content
+
+	.container
+		+fab()
+		+topoLista('19–25 de Abril, 2018')
+
+		.heading(style='margin-top:15px')
+		+cardGrid()
+			+linha('SHB Ind. e Com. Alimentos S.A.', 'Cliente', 'Blumenau / SC')
+			+linha('Dalquim Ind. e Com. Ltda', 'Cliente', 'Itabira / MG')
+			+linha('JBS S.A.', 'Cliente', 'Aceguá / RS')
+			+linha('Ysa Transportes Eireli EPP', 'Cliente', 'São Paulo / SP')
+			+linha('Bell Industria de Confecções LTDA', 'Cliente', 'São Paulo / SP')
+
+mixin linha(cliente, tipo, endereco)
+	tr
+		+colunaCheckbox()
+		td= cliente
+		td= tipo
+		td.col-descricao= endereco
+		td.col-numero
+		+colunaAcoes()
+
